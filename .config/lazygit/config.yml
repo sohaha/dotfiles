@@ -1,4 +1,5 @@
 gui:
+  # border: single
   theme: # catppuccin palette of course
     activeBorderColor:
       - '#89dceb'
@@ -19,6 +20,6 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
-
   authorColors:
     '*': '#b4befe'
+disableStartupPopups: true
