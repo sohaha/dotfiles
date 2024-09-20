@@ -26,11 +26,11 @@ fi
 
 
 # direnv
-if [ ! x "$(command -v direnv)" ]; then
-	export bin_path=~/.local/bin
-	curl -sfL https://direnv.net/install.sh | bash
-fi
-[ -x "$(command -v direnv)" ] && eval "$(direnv hook bash)"
+# if ! command -v direnv &> /dev/null; then
+#     export bin_path=~/.local/bin
+#     curl -sfL https://direnv.net/install.sh | bash
+# fi
+# [ -x "$(command -v direnv)" ] && eval "$(direnv hook $current_shell)"
 
 
 source "$current_script_dir/alias.sh"
