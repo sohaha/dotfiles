@@ -1,5 +1,5 @@
 current_shell=$(if [ -n "$BASH_VERSION" ]; then echo "bash"; elif [ -n "$ZSH_VERSION" ]; then echo "zsh"; else echo "unknown"; fi)
-
+current_script_dir=$(dirname "$0")
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
@@ -23,3 +23,7 @@ if [ -f "$HOME/.fzf.bash" ]; then
     source "$HOME/.fzf.zsh"
   fi
 fi
+
+
+
+source "$current_script_dir/alias.sh"

@@ -1,0 +1,1 @@
+alias fv='nvim $(fzf)'
