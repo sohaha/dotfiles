@@ -7,7 +7,7 @@ export VISUAL=$EDITOR
 export GIT_EDITOR=$EDITOR
 
 
-# FZF
+# fzf
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgreprc
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -24,6 +24,13 @@ if [ -f "$HOME/.fzf.bash" ]; then
   fi
 fi
 
+
+# direnv
+if [ ! x "$(command -v direnv)" ]; then
+	export bin_path=~/.local/bin
+	curl -sfL https://direnv.net/install.sh | bash
+fi
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook bash)"
 
 
 source "$current_script_dir/alias.sh"
