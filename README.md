@@ -3,5 +3,9 @@
 ## 拉取项目
 
 ```bash
-git clone --depth=1 https://github.com/sohaha/dotfiles.git
+git clone --depth=1 https://github.com/sohaha/dotfiles.git ~/dotfiles
+```
+
+```bash
+source ~/dotfiles/bash.sh
 ```
