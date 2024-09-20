@@ -1,3 +1,6 @@
+current_shell=$(if [ -n "$BASH_VERSION" ]; then echo "bash"; elif [ -n "$ZSH_VERSION" ]; then echo "zsh"; else echo "unknown"; fi)
+
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
 export VISUAL=$EDITOR
@@ -13,4 +16,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
+if [ -f "$HOME/.fzf.bash" ] then
+  if [ "$my_shell" = "zsh" ]; then
+    source "$HOME/.fzf.bash"
+  else
+    source "$HOME/.fzf.zsh"
+  fi
+end
