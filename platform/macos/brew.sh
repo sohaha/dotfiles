@@ -17,6 +17,7 @@ soft=(
   "snipaste"           # 截图
   "utools"             # utools
   "lazygit"            # GIT UI
+  "chsrc"              # 切换源
 )
 
 # 安装软件
