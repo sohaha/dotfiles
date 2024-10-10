@@ -18,6 +18,7 @@ soft=(
   "utools"             # utools
   "lazygit"            # GIT UI
   "chsrc"              # 切换源
+  "mac-cleanup-py"     # 自动清理
 )
 
 # 安装软件
