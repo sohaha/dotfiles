@@ -9,3 +9,8 @@ https://chromewebstore.google.com/detail/danmaku-mini-player-pictu/nahbabjlllhoc
 ## GitHub 优化
 
 https://chromewebstore.google.com/detail/github-linker/onibhfpjiiendmejmgccflkcjhifgbgn
+
+
+## YouTube™ 双字幕
+
+https://chromewebstore.google.com/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm
