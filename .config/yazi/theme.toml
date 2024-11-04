@@ -3,6 +3,11 @@
 [flavor]
 use = "zls"
 
+[manager]
+cwd = { fg = "cyan" }
+border_symbol = "│"
+border_style = { fg = "darkgray" }
+
 [icon]
 files = [
 	{ name = ".babelrc", text = "", fg_dark = "#c87e46", fg_light = "#ed9a57" },

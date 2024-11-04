@@ -29,7 +29,7 @@ border_symbol = "│"
 border_style = { fg = "#8087a2" }
 
 # Highlighting
-syntect_theme = "~/.config/bat/themes/Catppuccin-macchiato.tmTheme"
+# syntect_theme = "~/.config/bat/themes/Catppuccin-macchiato.tmTheme"
 
 [status]
 separator_open = ""
@@ -55,8 +55,8 @@ permissions_s = { fg = "#8087a2" }
 
 [input]
 border = { fg = "#8aadf4" }
-title = {}
-value = {}
+# title = {}
+# value = {}
 selected = { reversed = true }
 
 [select]
@@ -66,7 +66,7 @@ inactive = {}
 
 [tasks]
 border = { fg = "#8aadf4" }
-title = {}
+# title = {}
 hovered = { underline = true }
 
 [which]
@@ -85,7 +85,6 @@ hovered = { bg = "#5b6078" }
 footer = { fg = "#494d64", bg = "#cad3f5" }
 
 [filetype]
-
 rules = [
     { name = "*", is = "block", fg = "#cad3f5" },
     { name = "*", is = "char", fg = "#a6da95" },

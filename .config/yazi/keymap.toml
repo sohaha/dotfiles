@@ -100,8 +100,11 @@ append_keymap = [
     "g",
     "c",
   ], run = "cd ~/Code/", desc = "Code" },
+ { on = [
+    "g",
+    "g",
+  ], run =  "plugin lazygit", desc = "Lazygit" },
 ]
-
 
 [tasks]
 prepend_keymap = [{ on = ["<F1>"], run = "close", desc = "Close task manager" }]
