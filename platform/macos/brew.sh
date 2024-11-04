@@ -20,6 +20,7 @@ soft=(
   "chsrc"              # 切换源
   "mac-cleanup-py"     # 自动清理
   "zen-browser"        # Zen Browser
+  "yazi"               # Yazi
 )
 
 # 安装软件

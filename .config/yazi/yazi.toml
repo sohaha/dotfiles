@@ -1,0 +1,41 @@
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+# https://yazi-rs.github.io/docs/configuration/yazi
+
+[manager]
+show_hidden = true
+show_symlink = true
+scrolloff = 3
+ratio = [1, 3, 4]
+sort_by = "modified"
+
+[plugin]
+prepend_previewers = [
+  # HEIC previewer
+  { mime = "image/heic", run = "heic" },
+]
+
+[preview]
+max_width = 2000
+max_height = 2000
+
+[opener]
+# https://yazi-rs.github.io/docs/configuration/yazi/#opener
+video = [{ run = 'iina "$@"', orphan = false, for = "macos", desc = "IINA" }]
+open = [
+  { run = 'open "$@"', for = "macos", desc = "open" },
+  { run = 'cursor "$@"', for = "macos", desc = "cursor" },
+  { run = 'code "$@"', for = "macos", desc = "vscode" },
+  { run = 'xdg-open "$@"', desc = "xdg-open" },
+]
+fallback = [{ run = 'xdg-open "$@"', desc = "xdg-Open" }]
+edit = [
+  { run = '$EDITOR "$@"', block = true, for = "unix" },
+  { run = '$EDITOR "$@"', block = true, for = "macos" },
+  { run = "%EDITOR% %*", block = true, for = "windows" },
+  { run = 'cursor "$@"', for = "macos", desc = "cursor" },
+  { run = 'code "$@"', for = "macos", desc = "vscode" },
+]
+[open]
+prepend_rules = [{ name = "*.mp4", use = "video" }]
+append_rules = [{ name = "*", use = "fallback" }]

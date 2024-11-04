@@ -47,16 +47,16 @@ return {
       source = { Color = "#fdf5e0" },
       height = "100%",
       width = "100%",
-      opacity = 0.95,
+      opacity = 0.90,
     },
   },
 
   -- scrollbar
-  -- enable_scroll_bar = true,
-  -- min_scroll_bar_height = "3cell",
-  -- colors = {
-  --   -- scrollbar_thumb = "#34354D",
-  -- },
+  enable_scroll_bar = true,
+  min_scroll_bar_height = "3cell",
+  colors = {
+    -- scrollbar_thumb = "#34354D",
+  },
 
   -- tab bar
   enable_tab_bar = true,
