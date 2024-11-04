@@ -158,7 +158,7 @@ run = "cd ~/Code/"
 desc = "Code"
 
 [[manager.append_keymap]]
-on = ["g", "g"]
+on = ["g", "G"]
 run = "plugin lazygit"
 desc = "Lazygit"
 
