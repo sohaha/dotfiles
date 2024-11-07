@@ -22,10 +22,9 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
-      
 disableStartupPopups: true
-
 git:
+  disableForcePushing: true
   paging:
     colorArg: always
     useConfig: true
