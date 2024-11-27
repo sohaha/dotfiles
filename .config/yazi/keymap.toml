@@ -111,6 +111,11 @@ on = ["<S-Down>"]
 run = "plugin --sync nvim --args='scroll-preview 5'"
 desc = "Seek down 5 units in the preview"
 
+[[manager.prepend_keymap]]
+on = "y"
+run = [ '''
+shell 'for path in "$@"; do echo "file://$path"; done | pbcopy' --confirm
+''', "yank" ]
 
 [[manager.append_keymap]]
 on = ["l"]
