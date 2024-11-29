@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo spctl --master-disable
+
 # 软件列表
 soft=(
   "pearcleaner"                     # 清理
@@ -22,6 +24,11 @@ soft=(
   "zen-browser"                     # Zen Browser
   "yazi"                            # Yazi
   "anhoder/go-musicfox/go-musicfox" # 网易云音乐
+  "bitwarden"                       # Bitwarden
+  "obsidian"                        # 笔记
+  "visual-studio-code"              # VSCode
+  "orbstack"                        # OrbStack
+  "cursor"                          # Cursor
 )
 
 # 安装软件

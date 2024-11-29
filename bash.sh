@@ -33,4 +33,6 @@ fi
 # [ -x "$(command -v direnv)" ] && eval "$(direnv hook $current_shell)"
 
 
+export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/bin:$PATH
+
 source "$current_script_dir/alias.sh"
