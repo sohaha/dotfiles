@@ -5,7 +5,7 @@ local font = "JetBrainsMono NF"
 local font_size = platform().is_mac and 16 or 14
 
 return {
-  font = wezterm.font(font),
+  -- font = wezterm.font(font),
   font_size = font_size,
   -- font_smoothing = "subpixel",
   -- font_antialias = "grayscale",
