@@ -25,3 +25,7 @@ https://chromewebstore.google.com/detail/沉浸式翻译-网页翻译插件-pdf�
 ## 书签收集
 
 https://chromewebstore.google.com/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien
+
+## 保存到 Notion
+
+https://chromewebstore.google.com/detail/save-to-notion/ldmmifpegigmeammaeckplhnjbbpccmm
