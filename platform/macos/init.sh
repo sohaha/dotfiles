@@ -1,8 +1,10 @@
 chsh -s $(which zsh)
 
+sudo spctl --master-disable
+
 defaults write -g com.apple.keyboard.fnState -bool true
 
-/bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install)"
+/bin/bash -c "$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)"
 
 eval "$(curl https://get.x-cmd.com)"
 

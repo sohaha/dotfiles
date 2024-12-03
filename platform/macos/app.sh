@@ -5,11 +5,13 @@ soft=(
     "搜狗输入法 https://shurufa.sogou.com/"
     "terminal https://www.terminal.icu/"
     "arc浏览器 https://arc.net/"
+    "windsurf https://codeium.com/windsurf"
 )
 
 for item in "${soft[@]}"; do
     name=$(echo "$item" | cut -d' ' -f1)
     url=$(echo "$item" | cut -d' ' -f2)
     echo "$name: $url"
+    open $url
 done
 
