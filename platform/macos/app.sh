@@ -5,6 +5,7 @@ soft=(
     "terminal https://www.terminal.icu/"
     "arc浏览器 https://arc.net/"
     "windsurf https://codeium.com/windsurf"
+    "apifox https://apifox.com/"
 )
 
 for item in "${soft[@]}"; do
