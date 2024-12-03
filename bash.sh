@@ -1,5 +1,6 @@
 current_shell=$(if [ -n "$BASH_VERSION" ]; then echo "bash"; elif [ -n "$ZSH_VERSION" ]; then echo "zsh"; else echo "unknown"; fi)
-current_script_dir=$(dirname "$0")
+current_script_dir=$(dirname "$0")/script
+OS_NAME=$(uname)
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
@@ -36,3 +37,11 @@ fi
 export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/bin:$PATH
 
 source "$current_script_dir/alias.sh"
+
+if [[ $OS_NAME = 'Linux' ]]; then
+  source $current_script_dir/linux.sh
+elif [[ $OS_NAME = 'Darwin' ]]; then
+  export IS_MAC=1
+  source $current_script_dir/macos_alias.sh
+fi
+

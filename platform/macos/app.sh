@@ -1,5 +1,4 @@
 
-
 soft=(
     "微信 https://mac.weixin.qq.com/"
     "搜狗输入法 https://shurufa.sogou.com/"
