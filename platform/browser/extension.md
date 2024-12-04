@@ -29,3 +29,8 @@ https://chromewebstore.google.com/detail/raindropio/ldgfbffkinooeloadekpmfoklnob
 ## 保存到 Notion
 
 https://chromewebstore.google.com/detail/save-to-notion/ldmmifpegigmeammaeckplhnjbbpccmm
+
+
+## 广告移除
+
+https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
