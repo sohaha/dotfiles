@@ -29,6 +29,7 @@ soft=(
   "visual-studio-code"              # VSCode
   "orbstack"                        # OrbStack
   "cursor"                          # Cursor
+  "obsidian"                        # Obsidian
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
 )
 
