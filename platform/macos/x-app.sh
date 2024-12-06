@@ -5,7 +5,7 @@ soft=(
   "s-tui"  # 系统信息
   "hey" # 压力测试
   "nvim" # 编辑器
-  # "ncdu" # 磁盘管理
+  "ncdu" # 磁盘管理
   # "trashy" # 回收站
 )
 
