@@ -1,3 +1,33 @@
 
 alias fv='nvim $(fzf)'
 alias y='yazi'
+
+function proxy_off(){
+    unset http_proxy
+    unset https_proxy
+    echo  "proxy is off"
+}
+
+function proxy_on() {
+    # socks5://127.0.0.1:10808
+    local proxy_url="http://127.0.0.1:7890"
+    if [ -n "$1" ]; then
+        if [[ $1 != *":"* ]]; then
+            proxy_url="127.0.0.1:$1"
+        else
+            proxy_url="$1"
+        fi
+        if [[ $proxy_url != *"://"* ]]; then
+            proxy_url="http://$proxy_url"
+        fi
+    fi
+    export no_proxy="localhost,127.0.0.1"
+    export http_proxy=$proxy_url
+    export https_proxy=$http_proxy
+    echo  "prxoy is on: $https_proxy"
+}
+
+function proxy_status() {
+    echo $https_proxy
+    curl cip.cc
+}

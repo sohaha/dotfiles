@@ -31,6 +31,7 @@ soft=(
   "cursor"                          # Cursor
   "obsidian"                        # Obsidian
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
+  "emilevr/space/space"             # 硬盘分析
 )
 
 # 安装软件
