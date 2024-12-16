@@ -34,14 +34,13 @@ fi
 # [ -x "$(command -v direnv)" ] && eval "$(direnv hook $current_shell)"
 
 
-export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/bin:$PATH
+export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/go/bin:$HOME/bin:$PATH
 
 source "$current_script_dir/alias.sh"
 
 if [[ $OS_NAME = 'Linux' ]]; then
-  source $current_script_dir/linux.sh
+  source $current_script_dir/linux_alias.sh
 elif [[ $OS_NAME = 'Darwin' ]]; then
   export IS_MAC=1
   source $current_script_dir/macos_alias.sh
 fi
-
