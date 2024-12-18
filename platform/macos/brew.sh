@@ -2,6 +2,7 @@
 
 sudo spctl --master-disable
 
+
 # 软件列表
 soft=(
   "pearcleaner"                     # 清理
@@ -31,10 +32,16 @@ soft=(
   "cursor"                          # Cursor
   "obsidian"                        # Obsidian
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
-  # "emilevr/space/space"             # 硬盘分析
+  "amethyst"                      # 窗口管理
 )
 
-# 安装软件
+services=()
+
+
 for item in "${soft[@]}"; do
   brew install "$item"
+done
+
+for item in "${services[@]}"; do
+  brew services start "$item"
 done
