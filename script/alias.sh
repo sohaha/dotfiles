@@ -5,6 +5,12 @@ alias y='yazi'
 function proxy_off(){
     unset http_proxy
     unset https_proxy
+
+    if command -v git &> /dev/null; then
+        git config --unset http.proxy
+        git config --unset https.proxy
+    fi
+    
     echo  "proxy is off"
 }
 
@@ -24,6 +30,10 @@ function proxy_on() {
     export no_proxy="localhost,127.0.0.1"
     export http_proxy=$proxy_url
     export https_proxy=$http_proxy
+    if command -v git &> /dev/null; then
+        git config http.proxy $https_proxy
+        git config https.proxy $https_proxy
+    fi
     echo  "prxoy is on: $https_proxy"
 }
 
