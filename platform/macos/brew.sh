@@ -32,7 +32,8 @@ soft=(
   "cursor"                          # Cursor
   "obsidian"                        # Obsidian
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
-  "amethyst"                      # 窗口管理
+  "amethyst"                        # 窗口管理
+  "nikitabobko/tap/aerospace"       # 窗口管理
 )
 
 services=()

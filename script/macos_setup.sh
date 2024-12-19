@@ -5,6 +5,11 @@ link_file_hard "$HOME/dotfiles/config/vimo/VERSION" "$HOME/Library/Containers/Ch
 link_file_hard "$HOME/dotfiles/config/vimo/presets.db" "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs/presets.db"
 link_file_hard "$HOME/dotfiles/config/vimo/userdata.db" "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs/userdata.db"
 
+# aerospace
+link_file "$HOME/.aerospace.toml" "$HOME/dotfiles/config/aerospace/aerospace.toml"
+
+# 随意拖拽
+defaults write -g NSWindowShouldDragOnGesture -bool true
 # 使用 F1-F12 键 作为功能键
 defaults write -g com.apple.keyboard.fnState -bool true
 # 全键盘切换
