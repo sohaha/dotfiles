@@ -9,7 +9,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
-accordion-padding = 30
+accordion-padding = 20
 default-root-container-orientation = 'auto'
 
 # Mouse follows focus when focused monitor changes
@@ -85,8 +85,9 @@ esc = ['reload-config', 'mode main']
 
 cmd-alt-ctrl-shift-space = 'fullscreen'
 
-cmd-alt-ctrl-shift-left = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev'
-cmd-alt-ctrl-shift-right = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace next'
+cmd-alt-ctrl-shift-s = 'workspace --wrap-around next'
+cmd-alt-ctrl-shift-left = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace --wrap-around prev'
+cmd-alt-ctrl-shift-right = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 cmd-alt-ctrl-shift-q = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
@@ -113,19 +114,25 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
-alt-p = 'workspace p'
-alt-o = 'workspace o'
-cmd-alt-ctrl-shift-1 = 'workspace browser'
+alt-1 = 'workspace 1 --auto-back-and-forth'
+alt-2 = 'workspace 2 --auto-back-and-forth'
+alt-3 = 'workspace 3 --auto-back-and-forth'
+alt-4 = 'workspace 4 --auto-back-and-forth'
+alt-5 = 'workspace 5 --auto-back-and-forth'
+alt-6 = 'workspace 6 --auto-back-and-forth'
+alt-7 = 'workspace 7 --auto-back-and-forth'
+alt-8 = 'workspace 8 --auto-back-and-forth'
+alt-9 = 'workspace 9 --auto-back-and-forth'
+alt-0 = 'workspace 10 --auto-back-and-forth'
+alt-p = 'workspace p --auto-back-and-forth'
+alt-o = 'workspace o --auto-back-and-forth'
+alt-i = 'workspace i --auto-back-and-forth'
+alt-u = 'workspace u --auto-back-and-forth'
+alt-y = 'workspace y --auto-back-and-forth'
+alt-t = 'workspace t --auto-back-and-forth'
+alt-r = 'workspace r --auto-back-and-forth'
+
+cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -141,6 +148,11 @@ alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
 alt-shift-p = ['move-node-to-workspace p', 'workspace p']
 alt-shift-o = ['move-node-to-workspace o', 'workspace o']
+alt-shift-i = ['move-node-to-workspace i', 'workspace i']
+alt-shift-u = ['move-node-to-workspace u', 'workspace u']
+alt-shift-y = ['move-node-to-workspace y', 'workspace y']
+alt-shift-t = ['move-node-to-workspace t', 'workspace t']
+alt-shift-r = ['move-node-to-workspace r', 'workspace r']
 
 
 alt-tab = 'workspace-back-and-forth'
@@ -148,17 +160,14 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-comma = 'mode service'
-alt-shift-r = ['mode resize']
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-    'layout floating tiling',
-    'mode main',
-] # Toggle between floating and tiling layout
+space = ['flatten-workspace-tree', 'mode main']
+r = ['mode resize']
+f = ['layout floating tiling']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 
