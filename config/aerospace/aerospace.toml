@@ -123,6 +123,9 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
+alt-p = 'workspace p'
+alt-o = 'workspace o'
+cmd-alt-ctrl-shift-1 = 'workspace browser'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -136,15 +139,15 @@ alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
+alt-shift-p = ['move-node-to-workspace p', 'workspace p']
+alt-shift-o = ['move-node-to-workspace o', 'workspace o']
+
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-# alt shift , switch to 'service' mode
 alt-shift-comma = 'mode service'
-
-
 alt-shift-r = ['mode resize']
 
 # 'service' binding mode declaration.
@@ -170,11 +173,15 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace browser'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.com.zen.browser'
+run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 10'
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xWeChat'
