@@ -34,6 +34,7 @@ soft=(
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
   "amethyst"                        # 窗口管理
   "nikitabobko/tap/aerospace"       # 窗口管理
+  "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
 )
 
 services=()
