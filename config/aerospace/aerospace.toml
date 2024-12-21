@@ -199,5 +199,16 @@ if.app-id = 'com.anytype.anytype'
 run = 'move-node-to-workspace note'
 
 [[on-window-detected]]
+# if.app-id = 'com.tencent.xWeChat'
+# run = 'layout floating'
 if.app-id = 'com.tencent.xWeChat'
+if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = '(setting|设置)'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = '(Picture-in-Picture|画中画)'
 run = 'layout floating'
