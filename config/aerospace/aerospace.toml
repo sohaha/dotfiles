@@ -134,6 +134,7 @@ alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
 cmd-alt-ctrl-shift-2 = 'workspace 10 --auto-back-and-forth'
+cmd-alt-ctrl-shift-3 = 'workspace note --auto-back-and-forth'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
