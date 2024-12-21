@@ -35,6 +35,7 @@ soft=(
   "amethyst"                        # 窗口管理
   "nikitabobko/tap/aerospace"       # 窗口管理
   "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
+  "anytype"                         # Anytype
 )
 
 services=()

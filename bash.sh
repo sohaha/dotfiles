@@ -1,5 +1,5 @@
 current_shell=$(if [ -n "$BASH_VERSION" ]; then echo "bash"; elif [ -n "$ZSH_VERSION" ]; then echo "zsh"; else echo "unknown"; fi)
-current_script_dir=$(dirname "$0")/script
+current_script_dir=$HOME/dotfiles/script
 OS_NAME=$(uname)
 
 export XDG_CONFIG_HOME="$HOME/.config"
