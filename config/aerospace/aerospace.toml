@@ -133,6 +133,7 @@ alt-t = 'workspace t --auto-back-and-forth'
 alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
+cmd-alt-ctrl-shift-2 = 'workspace 10 --auto-back-and-forth'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -191,6 +192,10 @@ run = 'move-node-to-workspace browser'
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
 run = 'move-node-to-workspace 10'
+
+[[on-window-detected]]
+if.app-id = 'com.anytype.anytype'
+run = 'move-node-to-workspace note'
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xWeChat'
