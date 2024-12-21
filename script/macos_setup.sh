@@ -1,3 +1,6 @@
+#!/bin/bash
+
+source $HOME/dotfiles/script/utils.sh
 
 # vimo
 mkdir -p "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs"
@@ -6,7 +9,7 @@ link_file_hard "$HOME/dotfiles/config/vimo/presets.db" "$HOME/Library/Containers
 link_file_hard "$HOME/dotfiles/config/vimo/userdata.db" "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs/userdata.db"
 
 # aerospace
-link_file "$HOME/.aerospace.toml" "$HOME/dotfiles/config/aerospace/aerospace.toml"
+link_file "$HOME/dotfiles/config/aerospace/aerospace.toml" "$HOME/.aerospace.toml" 
 
 # 随意拖拽
 defaults write -g NSWindowShouldDragOnGesture -bool true
@@ -42,6 +45,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # 重启 Finder
 killall Finder && killall Dock && killall SystemUIServer
 
-source platform/macos/init.sh
-source platform/macos/x-app.sh
-source platform/macos/app.sh
+# source platform/macos/init.sh
+# source platform/macos/x-app.sh
+# source platform/macos/brew.sh
+# source platform/macos/app.sh
