@@ -55,8 +55,8 @@ local hide = function(state)
   pub_event({ visible = false })
 end
 
-local function entry(state, args)
-  local action = args[1]
+local function entry(job)
+  local action = job.args[1]
   if not action then
     ya.err("action not given")
     return

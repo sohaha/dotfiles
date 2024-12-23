@@ -170,6 +170,7 @@ esc = ['reload-config', 'mode main']
 space = ['flatten-workspace-tree', 'mode main']
 r = ['mode resize']
 f = ['layout floating tiling', 'mode main']
+# s = ['layout sticky tiling', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 
@@ -199,10 +200,17 @@ if.app-id = 'com.anytype.anytype'
 run = 'move-node-to-workspace note'
 
 [[on-window-detected]]
-# if.app-id = 'com.tencent.xWeChat'
-# run = 'layout floating'
+if.app-id = 'com.exafunction.windsurf'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
 if.app-id = 'com.tencent.xWeChat'
-if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
+# run = 'layout floating'
+# if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
 run = 'layout floating'
 
 [[on-window-detected]]
@@ -211,4 +219,20 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.window-title-regex-substring = '(Picture-in-Picture|画中画)'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.youqu.todesk.mac'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.ruikq.decar'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'party.mihomo.app'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.seastar.turrit'
 run = 'layout floating'

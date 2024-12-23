@@ -2,8 +2,8 @@ local is_active = os.getenv("NVIM_YAZI")
 
 local pub_event = function(payload) ps.pub("to-nvim", payload) end
 
-local function entry(state, args)
-  local action = args[1]
+local function entry(job)
+  local action = job.args[1]
   if not action then
     ya.err("action not given")
     return
@@ -24,7 +24,7 @@ local function entry(state, args)
     end
     return
   elseif action == "scroll-preview" then
-    local scroll_units = tonumber(args[2])
+    local scroll_units = tonumber(job.args[2])
     if not scroll_units then
       ya.err("scroll units not given or is invalid")
       return
