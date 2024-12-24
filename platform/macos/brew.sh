@@ -36,10 +36,18 @@ soft=(
   "nikitabobko/tap/aerospace"       # 窗口管理
   "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
   "anytype"                         # Anytype
+  "mpv-iina"                        # mpv
 )
 
 services=()
 
+taps=(
+  "iina/homebrew-mpv-iina" # mpv
+)
+
+for item in "${taps[@]}"; do
+  brew tap "$item"
+done
 
 for item in "${soft[@]}"; do
   brew install "$item"
