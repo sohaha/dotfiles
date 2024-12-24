@@ -1,6 +1,8 @@
 
+
 alias fv='nvim $(fzf)'
 alias y='yazi'
+# alias cd='zoxide'
 
 function proxy_off(){
     unset http_proxy
@@ -31,10 +33,11 @@ function proxy_on() {
     export http_proxy=$proxy_url
     export https_proxy=$http_proxy
     if command -v git &> /dev/null; then
-        git config http.proxy $https_proxy
-        git config https.proxy $https_proxy
+        git config http.proxy $https_proxy  &> /dev/null
+        git config https.proxy $https_proxy &> /dev/null
     fi
     echo  "prxoy is on: $https_proxy"
+    proxy_status
 }
 
 function proxy_status() {

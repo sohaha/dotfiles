@@ -2,6 +2,8 @@
 
 # set -e
 
+chsh -s $(which zsh)
+
 # 安装
 function install() {
   echo "install $1"

@@ -45,7 +45,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # 重启 Finder
 killall Finder && killall Dock && killall SystemUIServer
 
-# source platform/macos/init.sh
-# source platform/macos/x-app.sh
-# source platform/macos/brew.sh
-# source platform/macos/app.sh
+source platform/macos/init.sh
+source platform/others/x-app.sh
+source platform/macos/brew.sh
+source platform/macos/app.sh

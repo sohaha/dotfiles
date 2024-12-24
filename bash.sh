@@ -38,6 +38,13 @@ export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/go/bin:$HOME/bin
 
 source "$current_script_dir/alias.sh"
 
+if [ "$my_shell" = "zsh" ]; then
+  source $current_script_dir/zsh_alias.sh
+else
+    source $current_script_dir/bash_alias.sh
+fi
+
+
 if [[ $OS_NAME = 'Linux' ]]; then
   source $current_script_dir/linux_alias.sh
 elif [[ $OS_NAME = 'Darwin' ]]; then
