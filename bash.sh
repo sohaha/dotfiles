@@ -18,10 +18,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 if [ -f "$HOME/.fzf.bash" ]; then
-  if [ "$my_shell" = "zsh" ]; then
-    source "$HOME/.fzf.bash"
-  else
+  if [ "$current_shell" = "zsh" ]; then
     source "$HOME/.fzf.zsh"
+  else
+    source "$HOME/.fzf.bash"
   fi
 fi
 
@@ -38,7 +38,7 @@ export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/go/bin:$HOME/bin
 
 source "$current_script_dir/alias.sh"
 
-if [ "$my_shell" = "zsh" ]; then
+if [ "$current_shell" = "zsh" ]; then
   source $current_script_dir/zsh_alias.sh
 else
     source $current_script_dir/bash_alias.sh
