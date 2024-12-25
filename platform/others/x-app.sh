@@ -10,7 +10,9 @@ soft=(
   # "trashy"   # 回收站
 )
 
-x install $(echo "${soft[*]}")
+for app in "${soft[@]}"; do
+  x install "$app" || echo "Failed to install $app"
+done
 
 # x openai init 
 
