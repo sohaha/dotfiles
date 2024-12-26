@@ -106,14 +106,13 @@
 # ]
 
 # open terminal, blazingly fast compared to iTerm/Hyper
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-
-# open qutebrowser
-cmd + shift - return [
-#    "微信（测试版）" : osascript -e 'tell application "System Events" to tell window 1 of process "Weixin" to minimize'
-   "微信（测试版）" : osascript -e 'tell application "System Events" to set visible of process "Weixin" to true'
-   * : open -a /Applications/Weixin.app
-]
+# cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 
-cmd - w : open -na /Applications/Weixin.app $(pbpaste)
+# cmd - w [
+#    "微信（测试版）" : osascript -e 'tell application "System Events" to set visible of process "Weixin" to false'
+#    * : open -a /Applications/Weixin.app
+# ]
+
+
+# cmd - w : open -na /Applications/Weixin.app $(pbpaste)

@@ -37,12 +37,12 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = [{ monitor.main = 0 }, 5]
-inner.vertical = [{ monitor.main = 0 }, 5]
-outer.left = [{ monitor.main = 0 }, 5]
-outer.bottom = [{ monitor.main = 0 }, 5]
-outer.top = [{ monitor.main = 0 }, 5]
-outer.right = [{ monitor.main = 0 }, 5]
+inner.horizontal = [{ monitor.main = 0 }, 0]
+inner.vertical = [{ monitor.main = 0 }, 0]
+outer.left = [{ monitor.main = 0 }, 0]
+outer.bottom = [{ monitor.main = 0 }, 0]
+outer.top = [{ monitor.main = 0 }, 0]
+outer.right = [{ monitor.main = 0 }, 0]
 
 
 [mode.resize.binding]
@@ -124,6 +124,7 @@ alt-7 = 'workspace 7 --auto-back-and-forth'
 alt-8 = 'workspace 8 --auto-back-and-forth'
 alt-9 = 'workspace 9 --auto-back-and-forth'
 alt-0 = 'workspace 10 --auto-back-and-forth'
+# alt-0 = 'exec-and-forget open -a /Applications/WezTerm.app'
 alt-p = 'workspace p --auto-back-and-forth'
 alt-o = 'workspace o --auto-back-and-forth'
 alt-i = 'workspace i --auto-back-and-forth'
@@ -193,7 +194,7 @@ run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 10'
+run = 'move-node-to-workspace terminal'
 
 [[on-window-detected]]
 if.app-id = 'com.anytype.anytype'
@@ -211,7 +212,8 @@ run = 'move-node-to-workspace 1'
 if.app-id = 'com.tencent.xWeChat'
 # run = 'layout floating'
 # if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
-run = 'layout floating'
+# run = 'layout floating'
+run = 'move-node-to-workspace chat'
 
 [[on-window-detected]]
 if.window-title-regex-substring = '(setting|设置)'
@@ -236,3 +238,7 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.seastar.turrit'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'cn.xterminal.www'
+run = 'move-node-to-workspace xterminal'
