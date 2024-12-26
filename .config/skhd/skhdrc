@@ -1,12 +1,15 @@
 # Key: https://github.com/koekeishiya/skhd/issues/1
 
 :: default : echo "进入默认模式"
-:: dev_mode @ : echo "进入开发模式"
+:: dev_mode : echo "进入开发模式"
 
-ralt - x ; dev_mode
+ralt - space ; dev_mode
 dev_mode < escape ; default
 
-dev_mode < cmd - return : open -a /Applications/Terminal.app > /dev/null 2>&1 ; default
+dev_mode < t : open -a /Applications/WezTerm.app > /dev/null 2>&1
+dev_mode < a : open -a /Applications/Apifox.app > /dev/null 2>&1
+dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
+dev_mode < space ; default
 
 # skhd --stop-service
 # skhd --start-service
@@ -24,12 +27,12 @@ cmd - n [
 ralt - 0x21 [
     "WezTerm": skhd -k "cmd - 0x21"
     "微信（测试版）": skhd -k "cmd - up"
-    *: aerospace focus left --boundaries-action wrap-around-the-workspace
+    *: aerospace focus --ignore-floating left --boundaries-action wrap-around-the-workspace
 ]
 
 # ralt - ]
 ralt - 0x1E [
     "WezTerm": skhd -k "cmd - 0x1E"
     "微信（测试版）": skhd -k "cmd - down"
-    *: aerospace focus right --boundaries-action wrap-around-the-workspace
+    *: aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
 ]
