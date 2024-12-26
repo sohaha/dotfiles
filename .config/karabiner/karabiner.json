@@ -4211,12 +4211,6 @@
             ],
             "name": "小影",
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "right_option" },
-                    "to": [{ "key_code": "f13" }]
-                }
-            ],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"

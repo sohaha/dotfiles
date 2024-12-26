@@ -127,7 +127,7 @@ alt-0 = 'workspace 10 --auto-back-and-forth'
 # alt-0 = 'exec-and-forget open -a /Applications/WezTerm.app'
 alt-p = 'workspace p --auto-back-and-forth'
 alt-o = 'workspace o --auto-back-and-forth'
-alt-i = 'workspace i --auto-back-and-forth'
+alt-i = 'workspace idea --auto-back-and-forth'
 alt-u = 'workspace u --auto-back-and-forth'
 alt-y = 'workspace y --auto-back-and-forth'
 alt-t = 'workspace t --auto-back-and-forth'
@@ -151,7 +151,7 @@ alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
 alt-shift-p = ['move-node-to-workspace p', 'workspace p']
 alt-shift-o = ['move-node-to-workspace o', 'workspace o']
-alt-shift-i = ['move-node-to-workspace i', 'workspace i']
+alt-shift-i = ['move-node-to-workspace i', 'workspace idea']
 alt-shift-u = ['move-node-to-workspace u', 'workspace u']
 alt-shift-y = ['move-node-to-workspace y', 'workspace y']
 alt-shift-t = ['move-node-to-workspace t', 'workspace t']
@@ -194,19 +194,19 @@ run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace terminal'
+run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]
 if.app-id = 'com.anytype.anytype'
-run = 'move-node-to-workspace note'
+run = ['move-node-to-workspace note']
 
 [[on-window-detected]]
 if.app-id = 'com.exafunction.windsurf'
-run = 'move-node-to-workspace 1'
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = 'move-node-to-workspace 1'
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xWeChat'
@@ -241,4 +241,8 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'cn.xterminal.www'
-run = 'move-node-to-workspace xterminal'
+run = ['move-node-to-workspace xterminal']
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.goland'
+run = ['move-node-to-workspace idea']
