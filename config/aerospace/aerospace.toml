@@ -130,7 +130,7 @@ alt-i = 'workspace idea --auto-back-and-forth'
 alt-u = 'workspace u --auto-back-and-forth'
 alt-y = 'workspace y --auto-back-and-forth'
 # alt-t = 'workspace t --auto-back-and-forth'
-alt-t = 'exec-and-forget open -a /Applications/WezTerm.app'
+alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
@@ -194,6 +194,10 @@ run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
+run = ['move-node-to-workspace terminal']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
 run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]
