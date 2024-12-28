@@ -3,9 +3,10 @@
 :: default : echo "进入默认模式"
 :: dev_mode : echo "进入开发模式"
 
+lcmd - q ; dev_mode
 ralt - space ; dev_mode
 dev_mode < escape ; default
-dev_mode < q : skhd -r
+dev_mode < q : skhd -k "cmd - q"
 # dev_mode < t : open -a /Applications/WezTerm.app > /dev/null 2>&1
 dev_mode < t : open -a /Applications/Ghostty.app > /dev/null 2>&1
 dev_mode < a : open -a /Applications/Apifox.app > /dev/null 2>&1
