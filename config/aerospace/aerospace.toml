@@ -222,6 +222,10 @@ if.app-id = 'com.tencent.xWeChat'
 run = 'move-node-to-workspace chat'
 
 [[on-window-detected]]
+if.app-id = 'com.tencent.xinWeChat'
+run = 'move-node-to-workspace chat'
+
+[[on-window-detected]]
 if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 

@@ -5,7 +5,7 @@ ws=${1:-$AEROSPACE_FOCUSED_WORKSPACE}
 IFS=$'\n' all_wins=$(aerospace list-windows --all --format '%{window-id}|%{app-name}|%{window-title}|%{monitor-id}|%{workspace}')
 IFS=$'\n' all_ws=$(aerospace list-workspaces --all --format '%{workspace}|%{monitor-id}')
 
-pip_titles=("Picture-in-picture" "Picture-in-Picture" "Picture in Picture" "Picture in picture")
+pip_titles=("Picture-in-picture" "Picture-in-Picture" "Picture in Picture" "Picture in picture", "微信")
 
 find_pip_windows() {
   local titles=("$@")
