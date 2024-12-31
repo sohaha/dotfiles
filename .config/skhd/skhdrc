@@ -18,11 +18,12 @@ dev_mode < space ; default
 # skhd -r
 
 cmd - n [
-    "kitty"       : echo "hello kitty"
-    *             : echo "hello everyone"
-    "qutebrowser" : echo "hello qutebrowser"
-    "terminal"    ~
-    "finder"      : false
+    "kitty"        : echo "hello kitty"
+    *              : echo "hello everyone"
+    "qutebrowser"  : echo "hello qutebrowser"
+    "terminal"     ~
+    "finder"       : false
+    "Arc"          : skhd -k "cmd - t" 
     "Ghostty"      : skhd -k "ctrl - q" && skhd -k "n"
 ]
 
@@ -78,3 +79,23 @@ ralt - 0x2A [
     *: aerospace layout tiles horizontal
 ]
 
+
+ralt - h [
+    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "h"
+    *             : ~
+]
+
+ralt - j [
+    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "j"
+    *             : ~
+]
+
+ralt - k [
+    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "k"
+    *             : ~
+]
+
+ralt - l [
+    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "l"
+    *             : ~
+]

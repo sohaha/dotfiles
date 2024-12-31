@@ -1,6 +1,25 @@
+palette = 0=#000000
+palette = 1=#c37372
+palette = 2=#72c373
+palette = 3=#c2c372
+palette = 4=#7372c3
+palette = 5=#c372c2
+palette = 6=#72c2c3
+palette = 7=#d9d9d9
+palette = 8=#323232
+palette = 9=#dbaaaa
+palette = 10=#aadbaa
+palette = 11=#dadbaa
+palette = 12=#aaaadb
+palette = 13=#dbaada
+palette = 14=#aadadb
+palette = 15=#ffffff
+background = 29262f
+foreground = d9e6f2
+cursor-color = d9e6f2
+selection-background = 073642
+selection-foreground = ffffff
 
-background = 282c34
-foreground = ffffff
 
 macos-titlebar-style = hidden
 window-decoration = false
@@ -15,6 +34,10 @@ keybind = ctrl+q>t=new_tab
 keybind = ctrl+q>n=new_window
 keybind = ctrl+q>]=next_tab
 keybind = ctrl+q>[=previous_tab
+keybind = ctrl+g>h=goto_split:left
+keybind = ctrl+g>j=goto_split:bottom
+keybind = ctrl+g>k=goto_split:top
+keybind = ctrl+g>l=goto_split:right
 
 
 keybind = ctrl+q>/=new_split:down
@@ -30,3 +53,6 @@ keybind = ctrl+q>r=reload_config
 
 # Empty values reset the configuration to the default value
 font-family =
+
+custom-shader-animation=false
+term = xterm-256color

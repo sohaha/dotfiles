@@ -2,7 +2,10 @@
 after-login-command = []
 after-startup-command = []
 start-at-login = true
-exec-on-workspace-change = ['/bin/bash','$HOME/dotfiles/config/aerospace/change.sh']
+exec-on-workspace-change = [
+    '/bin/bash',
+    '$HOME/dotfiles/config/aerospace/change.sh',
+]
 
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
@@ -85,7 +88,7 @@ esc = ['reload-config', 'mode main']
 # end tell'
 # '''
 
-cmd-alt-ctrl-shift-space = 'fullscreen'
+# cmd-alt-ctrl-shift-space = 'fullscreen'
 
 cmd-alt-ctrl-shift-s = 'workspace --wrap-around next'
 cmd-alt-ctrl-shift-left = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace --wrap-around prev'
@@ -136,7 +139,7 @@ alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
-cmd-alt-ctrl-shift-2 = 'workspace 10 --auto-back-and-forth'
+cmd-alt-ctrl-shift-2 = 'workspace terminal --auto-back-and-forth'
 cmd-alt-ctrl-shift-3 = 'workspace note --auto-back-and-forth'
 
 
