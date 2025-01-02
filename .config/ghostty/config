@@ -21,38 +21,38 @@
 # selection-foreground = ffffff
 
 # theme = "Builtin Solarized light"
-theme = "light:Builtin Solarized light,dark:rose-pine"
+theme = "light:iTerm2 Solarized Light,dark:rose-pine"
 # theme = "light:rose-pine-dawn,dark:rose-pine"
 
 macos-titlebar-style = hidden
 window-decoration = false
 
-keybind = ctrl+q=close_window
+keybind = ctrl+shift+q=close_window
 keybind = ctrl+z=close_surface
 
 keybind = ctrl+d=new_split:right
-keybind = ctrl+q>w=close_window
-keybind = ctrl+q>q=close_surface
-keybind = ctrl+q>t=new_tab
-keybind = ctrl+q>n=new_window
-keybind = ctrl+q>]=next_tab
-keybind = ctrl+q>[=previous_tab
-keybind = ctrl+g>h=goto_split:left
-keybind = ctrl+g>j=goto_split:bottom
-keybind = ctrl+g>k=goto_split:top
-keybind = ctrl+g>l=goto_split:right
+keybind = ctrl+shift+q>w=close_window
+keybind = ctrl+shift+q>q=close_surface
+keybind = ctrl+shift+q>t=new_tab
+keybind = ctrl+shift+q>n=new_window
+keybind = ctrl+shift+q>]=next_tab
+keybind = ctrl+shift+q>[=previous_tab
+keybind = ctrl+shift+g>h=goto_split:left
+keybind = ctrl+shift+g>j=goto_split:bottom
+keybind = ctrl+shift+g>k=goto_split:top
+keybind = ctrl+shift+g>l=goto_split:right
 
 
-keybind = ctrl+q>/=new_split:down
-keybind = ctrl+q>\=new_split:right
-keybind = ctrl+q>l=new_split:right
-keybind = ctrl+q>h=new_split:left
-keybind = ctrl+q>j=new_split:down
-keybind = ctrl+q>k=new_split:up
+keybind = ctrl+shift+q>/=new_split:down
+keybind = ctrl+shift+q>\=new_split:right
+keybind = ctrl+shift+q>l=new_split:right
+keybind = ctrl+shift+q>h=new_split:left
+keybind = ctrl+shift+q>j=new_split:down
+keybind = ctrl+shift+q>k=new_split:up
 
 
-keybind = ctrl+q>r=reload_config
-# keybind = ctrl+q>.=last_tab
+keybind = ctrl+shift+q>r=reload_config
+# keybind = ctrl+shift+q>.=last_tab
 
 # Empty values reset the configuration to the default value
 font-family =

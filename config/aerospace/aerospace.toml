@@ -130,13 +130,13 @@ alt-8 = 'workspace 8 --auto-back-and-forth'
 alt-9 = 'workspace 9 --auto-back-and-forth'
 alt-0 = 'workspace 10 --auto-back-and-forth'
 alt-p = 'workspace p --auto-back-and-forth'
-alt-o = 'workspace o --auto-back-and-forth'
+# alt-o = 'workspace o --auto-back-and-forth'
 alt-i = 'workspace idea --auto-back-and-forth'
-alt-u = 'workspace u --auto-back-and-forth'
-alt-y = 'workspace y --auto-back-and-forth'
+# alt-u = 'workspace u --auto-back-and-forth'
+# alt-y = 'workspace y --auto-back-and-forth'
 # alt-t = 'workspace t --auto-back-and-forth'
 alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
-alt-r = 'workspace r --auto-back-and-forth'
+# alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
 cmd-alt-ctrl-shift-2 = 'workspace terminal --auto-back-and-forth'
@@ -155,7 +155,7 @@ alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
 alt-shift-p = ['move-node-to-workspace p', 'workspace p']
-alt-shift-o = ['move-node-to-workspace o', 'workspace o']
+# alt-shift-o = ['move-node-to-workspace o', 'workspace o']
 alt-shift-i = ['move-node-to-workspace i', 'workspace idea']
 alt-shift-u = ['move-node-to-workspace u', 'workspace u']
 alt-shift-y = ['move-node-to-workspace y', 'workspace y']
@@ -232,9 +232,9 @@ run = 'move-node-to-workspace chat'
 if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 
-[[on-window-detected]]
-if.window-title-regex-substring = '(Picture-in-Picture|画中画)'
-run = 'layout floating'
+# [[on-window-detected]]
+# if.window-title-regex-substring = '(Picture-in-Picture|画中画)'
+# run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.youqu.todesk.mac'

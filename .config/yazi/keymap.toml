@@ -24,11 +24,16 @@ on = ["?"]
 run = "help"
 desc = "Show help"
 
-
 [[manager.prepend_keymap]]
 on = ["<C-t>"]
 run = "tab_create"
 desc = "New tab"
+
+[[manager.prepend_keymap]]
+on = ["w","t"]
+run = "tab_create"
+desc = "New tab"
+
 
 [[manager.prepend_keymap]]
 on = ["<C-w>"]
@@ -36,7 +41,7 @@ run = "tab_close"
 desc = "Close current tab"
 
 [[manager.prepend_keymap]]
-on = ["t"]
+on = ["w", "p"]
 run = "plugin --sync preview-visibility --args=toggle"
 desc = "Show/hide preview"
 

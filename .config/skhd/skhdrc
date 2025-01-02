@@ -24,28 +24,28 @@ cmd - n [
     "terminal"     ~
     "finder"       : false
     "Arc"          : skhd -k "cmd - t" 
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "n"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "n"
 ]
 
 rcmd - q [
-    "Ghostty"       : skhd -k "ctrl - q" && skhd -k "q"
+    "Ghostty"       : skhd -k "ctrl + shift - q" && skhd -k "q"
     *             : ~
 ]
 
 ralt - q [
-    "Ghostty"       : skhd -k "ctrl - q" && skhd -k "q"
+    "Ghostty"       : skhd -k "ctrl + shift - q" && skhd -k "q"
     *             : ~
 ]
 
 rcmd - r [
-    "Ghostty"       : skhd -k "ctrl - q" && skhd -k "r"
+    "Ghostty"       : skhd -k "ctrl + shift - q" && skhd -k "r"
     *             : ~
 ]
 
 # ralt - [
 ralt - 0x21 [
     "WezTerm": skhd -k "cmd - 0x21"
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "0x21"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x21"
     "微信（测试版）": skhd -k "cmd - up"
     *: aerospace focus --ignore-floating left --boundaries-action wrap-around-the-workspace
 ]
@@ -53,7 +53,7 @@ ralt - 0x21 [
 # ralt - ]
 ralt - 0x1E [
     "WezTerm": skhd -k "cmd - 0x1E"
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "0x1E"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x1E"
     "微信（测试版）": skhd -k "cmd - down"
     *: aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
 ]
@@ -61,7 +61,7 @@ ralt - 0x1E [
 # ralt - ]
 ralt - 0x1E [
     "WezTerm": skhd -k "cmd - 0x1E"
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "0x1E"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x1E"
     "微信（测试版）": skhd -k "cmd - down"
     *: aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
 ]
@@ -69,33 +69,33 @@ ralt - 0x1E [
 
 # ralt - /
 ralt - 0x2C [
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "0x2C"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2C"
     *: aerospace layout tiles vertical
 ]
 
 # ralt - \
 ralt - 0x2A [
-    "Ghostty"      : skhd -k "ctrl - q" && skhd -k "0x2A"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2A"
     *: aerospace layout tiles horizontal
 ]
 
 
 ralt - h [
-    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "h"
+    "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "h"
     *             : ~
 ]
 
 ralt - j [
-    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "j"
+    "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "j"
     *             : ~
 ]
 
 ralt - k [
-    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "k"
+    "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "k"
     *             : ~
 ]
 
 ralt - l [
-    "Ghostty"       : skhd -k "ctrl - g" && skhd -k "l"
+    "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "l"
     *             : ~
 ]
