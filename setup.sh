@@ -38,7 +38,7 @@ if [ -z "$1" ]; then
 
   [ -d "$HOME/.fzf" ] || (git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && $HOME/.fzf/install)
 
-  git clone --depth=1 https://github.com/ryanoasis/nerd-fonts $HOME/.config/nerd-fonts
+  git clone --depth=1 https://github.com/ryanoasis/nerd-fonts $HOME/.config/nerd-fonts >/dev/null 2>&1
 
   # git clone --depth=1 https://github.com/sohaha/nvim.git $HOME/.config/nvim
 

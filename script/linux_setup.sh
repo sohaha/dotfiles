@@ -1,1 +1,3 @@
-curl https://chsrc.run/posix | bash
+sudo -v
+
+curl https://chsrc.run/posix | sudo bash
