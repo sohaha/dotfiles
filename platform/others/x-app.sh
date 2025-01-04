@@ -1,5 +1,7 @@
 #!/bin/bash
 
+eval "$(curl https://get.x-cmd.com)"
+
 soft=(
   "bottom"     # 系统信息
   "s-tui"      # 系统信息

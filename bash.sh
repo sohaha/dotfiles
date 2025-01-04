@@ -17,12 +17,15 @@ export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-if [ -f "$HOME/.fzf.bash" ]; then
-  if [ "$current_shell" = "zsh" ]; then
+
+if [ "$current_shell" = "zsh" ]; then
+  if [ -f "$HOME/.fzf.zsh" ]; then
     source "$HOME/.fzf.zsh"
-  else
-    source "$HOME/.fzf.bash"
   fi
+  else
+    if [ -f "$HOME/.fzf.bash" ]; then
+      source "$HOME/.fzf.bash"
+    fi
 fi
 
 
