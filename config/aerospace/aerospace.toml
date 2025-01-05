@@ -245,6 +245,10 @@ if.app-id = 'com.ruikq.decar'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.iphonesimulator'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-id = 'party.mihomo.app'
 run = 'layout floating'
 
