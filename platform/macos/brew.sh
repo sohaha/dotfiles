@@ -2,7 +2,6 @@
 
 sudo spctl --master-disable
 
-
 # 软件列表
 soft=(
   "pearcleaner"                     # 清理
@@ -37,6 +36,7 @@ soft=(
   "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
   "anytype"                         # Anytype
   "ghostty"                         # Ghostty
+  "applite"                         # 汇总应用商店
   # "mpv-iina"                        # mpv
 )
 

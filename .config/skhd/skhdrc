@@ -17,6 +17,9 @@ dev_mode < space ; default
 # skhd --start-service
 # skhd -r
 
+alt - 0x35 : aerospace workspace terminal --auto-back-and-forth
+
+
 cmd - n [
     "kitty"        : echo "hello kitty"
     *              : echo "hello everyone"
