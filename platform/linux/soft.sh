@@ -2,14 +2,26 @@
 
 # set -e
 
+# 如果不存在 zsh
+if ! command -v zsh &> /dev/null; then
+   x install zsh
+fi
+
+
 chsh -s $(which zsh)
 
-# 安装
 function install() {
-  echo "install $1"
+  if command -v apt-get &> /dev/null; then
+    sudo apt-get install $1
+  elif command -v yum &> /dev/null; then
+    sudo yum install $1
+  fi
 }
 
-# 切换源
-curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-linux -o chsrc
-chmod +x chsrc
-sudo mv chsrc ~/bin/
+soft=(
+  "ripgrep"
+)
+
+for item in "${soft[@]}"; do
+  install "$item"
+done
