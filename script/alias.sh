@@ -3,6 +3,7 @@
 alias fv='nvim $(fzf)'
 alias y='yazi'
 # alias cd='zoxide'
+alias gc1="git clone --depth=1"
 
 function proxy_off(){
     unset http_proxy
