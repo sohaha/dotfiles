@@ -28,6 +28,7 @@ cmd - n [
     "finder"       : false
     "Arc"          : skhd -k "cmd - t" 
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "n"
+    "WezTerm"      : skhd -k "ctrl + cmd - t"
 ]
 
 rcmd - q [
@@ -37,6 +38,7 @@ rcmd - q [
 
 ralt - q [
     "Ghostty"       : skhd -k "ctrl + shift - q" && skhd -k "q"
+    "WezTerm"       : skhd -k "ctrl + cmd - 0x1B"
     *             : ~
 ]
 
@@ -73,12 +75,14 @@ ralt - 0x1E [
 # ralt - /
 ralt - 0x2C [
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2C"
+    "WezTerm"      : skhd -k "ctrl + cmd - 0x2C"
     *: aerospace layout tiles vertical
 ]
 
 # ralt - \
 ralt - 0x2A [
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2A"
+    "WezTerm"      : skhd -k "ctrl + cmd - 0x2A"
     *: aerospace layout tiles horizontal
 ]
 
