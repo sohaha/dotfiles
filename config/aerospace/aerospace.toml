@@ -138,8 +138,8 @@ alt-i = 'workspace idea --auto-back-and-forth'
 alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 # alt-r = 'workspace r --auto-back-and-forth'
 
-cmd-alt-ctrl-shift-1 = 'workspace browser --auto-back-and-forth'
-cmd-alt-ctrl-shift-2 = 'workspace terminal --auto-back-and-forth'
+cmd-alt-ctrl-shift-1 = 'workspace browser'
+cmd-alt-ctrl-shift-2 = 'workspace terminal'
 cmd-alt-ctrl-shift-3 = 'workspace note --auto-back-and-forth'
 
 
@@ -203,6 +203,10 @@ run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = ['move-node-to-workspace terminal']
+
+[[on-window-detected]]
+if.app-id = 'dev.warp.Warp-Stable'
 run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]

@@ -17,7 +17,7 @@ dev_mode < space ; default
 # skhd --start-service
 # skhd -r
 
-alt - 0x35 : aerospace workspace terminal --auto-back-and-forth
+alt - 0x35 : open -a /Applications/WezTerm.app
 
 
 cmd - n [
