@@ -2,6 +2,8 @@
 
 eval "$(curl https://get.x-cmd.com)"
 
+curl -sSfL https://raw.githubusercontent.com/iffse/pay-respects/main/install.sh | sh
+
 soft=(
   "bottom"     # 系统信息
   "s-tui"      # 系统信息
