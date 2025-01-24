@@ -214,6 +214,10 @@ if.app-id = 'com.anytype.anytype'
 run = ['move-node-to-workspace note']
 
 [[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['move-node-to-workspace note']
+
+[[on-window-detected]]
 if.app-id = 'com.exafunction.windsurf'
 run = ['move-node-to-workspace 3']
 
