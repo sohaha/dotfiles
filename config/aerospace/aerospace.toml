@@ -128,7 +128,7 @@ alt-6 = 'workspace 6 --auto-back-and-forth'
 alt-7 = 'workspace 7 --auto-back-and-forth'
 alt-8 = 'workspace 8 --auto-back-and-forth'
 alt-9 = 'workspace 9 --auto-back-and-forth'
-alt-0 = 'workspace 10 --auto-back-and-forth'
+alt-0 = 'workspace 0 --auto-back-and-forth'
 alt-p = 'workspace p --auto-back-and-forth'
 # alt-o = 'workspace o --auto-back-and-forth'
 alt-i = 'workspace idea --auto-back-and-forth'
@@ -153,7 +153,7 @@ alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
 alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
-alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
+alt-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
 alt-shift-p = ['move-node-to-workspace p', 'workspace p']
 # alt-shift-o = ['move-node-to-workspace o', 'workspace o']
 alt-shift-i = ['move-node-to-workspace i', 'workspace idea']
@@ -269,5 +269,11 @@ if.app-id = 'cn.xterminal.www'
 run = ['move-node-to-workspace xterminal']
 
 [[on-window-detected]]
+# golang
 if.app-id = 'com.jetbrains.goland'
 run = ['move-node-to-workspace idea']
+
+[[on-window-detected]]
+# 飞书
+if.app-id = 'com.electron.lark'
+run = ['move-node-to-workspace 0']
