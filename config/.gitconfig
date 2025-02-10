@@ -3,3 +3,5 @@
 	name = seekwe
 [pull]
 	rebase = false
+[core]
+	excludesfile = ~/.gitignore_global
