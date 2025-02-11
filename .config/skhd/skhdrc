@@ -17,7 +17,7 @@ dev_mode < space ; default
 # skhd --start-service
 # skhd -r
 
-alt - 0x35 : open -a /Applications/WezTerm.app
+alt - 0x35 : open -a /Applications/Ghostty.app
 
 
 cmd - n [
@@ -27,7 +27,7 @@ cmd - n [
     "terminal"     ~
     "finder"       : false
     "Arc"          : skhd -k "cmd - t" 
-    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "n"
+    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "t"
     "WezTerm"      : skhd -k "ctrl + cmd - t"
 ]
 

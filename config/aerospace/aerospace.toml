@@ -229,14 +229,14 @@ run = ['move-node-to-workspace 1']
 # 微信
 if.app-id = 'com.tencent.xWeChat'
 # if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
-run = ['move-node-to-workspace chat']
+run = ['layout floating', 'move-node-to-workspace chat']
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
 run = 'move-node-to-workspace chat'
 
 [[on-window-detected]]
-if.window-title-regex-substring = '(setting|设置|?!WeChat \(Chats\)|微信 \(聊天\))'
+if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 
 # [[on-window-detected]]

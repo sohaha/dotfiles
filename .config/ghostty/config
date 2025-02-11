@@ -24,8 +24,13 @@
 theme = "light:iTerm2 Solarized Light,dark:rose-pine"
 # theme = "light:rose-pine-dawn,dark:rose-pine"
 
-macos-titlebar-style = hidden
-window-decoration = false
+window-save-state = never
+maximize = true
+# fullscreen = true
+macos-non-native-fullscreen = true
+# macos-titlebar-style = transparent
+macos-titlebar-style = tabs
+# window-decoration = true
 
 keybind = ctrl+shift+q=close_window
 keybind = ctrl+z=close_surface
