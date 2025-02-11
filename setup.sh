@@ -28,6 +28,7 @@ fi
 link_file "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$HOME/dotfiles/config/.gitconfig" "$HOME/.gitconfig"
 link_file "$HOME/dotfiles/config/.gitignore_global" "$HOME/.gitignore_global"
+link_file "$HOME/dotfiles/config/env" "$HOME/.env"
 
 
 if [ -z "$1" ]; then

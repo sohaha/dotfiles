@@ -28,6 +28,9 @@ if [ "$current_shell" = "zsh" ]; then
     fi
 fi
 
+if [ -f "$HOME/.env" ]; then
+  source "$HOME/.env"
+fi
 
 # direnv
 # if ! command -v direnv &> /dev/null; then
