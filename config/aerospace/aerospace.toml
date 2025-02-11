@@ -203,7 +203,7 @@ run = ['move-node-to-workspace terminal']
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace terminal']
+run = ['layout floating', 'move-node-to-workspace terminal']
 
 [[on-window-detected]]
 if.app-id = 'dev.warp.Warp-Stable'

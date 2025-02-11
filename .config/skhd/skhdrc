@@ -17,7 +17,7 @@ dev_mode < space ; default
 # skhd --start-service
 # skhd -r
 
-alt - 0x35 : open -a /Applications/Ghostty.app
+alt - 0x35 : open -a /Applications/Ghostty.app && sleep 1 > /dev/null 2>&1 && aerospace fullscreen on
 
 
 cmd - n [
