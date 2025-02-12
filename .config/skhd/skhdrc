@@ -19,6 +19,9 @@ dev_mode < space ; default
 
 alt - 0x35 : open -a /Applications/Ghostty.app && sleep 1 > /dev/null 2>&1 && aerospace fullscreen on
 
+# rcmd + 空格: 切换全屏
+rcmd - 0x31 : aerospace fullscreen on
+
 
 cmd - n [
     "kitty"        : echo "hello kitty"
