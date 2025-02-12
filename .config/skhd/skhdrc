@@ -5,11 +5,16 @@
 
 lcmd - q ; dev_mode
 ralt - space ; dev_mode
+lcmd - space ; dev_mode
 dev_mode < escape ; default
 dev_mode < q : skhd -k "cmd - q"
+
+dev_mode < b : open -a /Applications/Arc.app > /dev/null 2>&1
 # dev_mode < t : open -a /Applications/WezTerm.app > /dev/null 2>&1
 dev_mode < t : open -a /Applications/Ghostty.app > /dev/null 2>&1
 dev_mode < a : open -a /Applications/Apifox.app > /dev/null 2>&1
+dev_mode < c : open -a /Applications/Cursor.app > /dev/null 2>&1
+dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
 dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
 dev_mode < space ; default
 
@@ -20,7 +25,7 @@ dev_mode < space ; default
 alt - 0x35 : open -a /Applications/Ghostty.app && sleep 1 > /dev/null 2>&1 && aerospace fullscreen on
 
 # rcmd + 空格: 切换全屏
-rcmd - 0x31 : aerospace fullscreen on
+rcmd - 0x31 : aerospace fullscreen
 
 
 cmd - n [
