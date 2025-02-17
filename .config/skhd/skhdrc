@@ -9,14 +9,14 @@ lcmd - space ; dev_mode
 dev_mode < escape ; default
 dev_mode < q : skhd -k "cmd - q"
 
-dev_mode < b : open -a /Applications/Arc.app > /dev/null 2>&1
-# dev_mode < t : open -a /Applications/WezTerm.app > /dev/null 2>&1
+dev_mode < a : open -a /Applications/Arc.app > /dev/null 2>&1
 dev_mode < t : open -a /Applications/Ghostty.app > /dev/null 2>&1
-dev_mode < a : open -a /Applications/Apifox.app > /dev/null 2>&1
+dev_mode < p : open -a /Applications/Apifox.app > /dev/null 2>&1
 dev_mode < c : open -a /Applications/Cursor.app > /dev/null 2>&1
 dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
-dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
+dev_mode < w : open -a /Applications/Weixin.app > /dev/null 2>&1
 dev_mode < space ; default
+
 
 # skhd --stop-service
 # skhd --start-service
@@ -114,3 +114,7 @@ ralt - l [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "l"
     *             : ~
 ]
+
+
+# 快捷启动应用
+rcmd - w : open -a /Applications/Weixin.app > /dev/null 2>&1
