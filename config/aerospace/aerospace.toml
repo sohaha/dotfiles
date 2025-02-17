@@ -276,3 +276,19 @@ run = ['move-node-to-workspace idea']
 # 飞书
 if.app-id = 'com.electron.lark'
 run = ['move-node-to-workspace 0']
+
+[[on-window-detected]]
+# RDC
+if.app-id = 'com.microsoft.rdc.macos'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+
+[[on-window-detected]]
+# Windows App RDC
+if.app-id = 'com.microsoft.rdc.macos'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+# Parallels Desktop
+if.app-id = 'com.parallels.desktop.console'
+run = ['layout tiling', 'move-node-to-workspace 8']
