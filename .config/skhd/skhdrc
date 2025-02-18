@@ -1,42 +1,52 @@
 # Key: https://github.com/koekeishiya/skhd/issues/1
 
 :: default : echo "进入默认模式"
-:: dev_mode : echo "进入开发模式"
-
+:: 进入开发模式
 lcmd - q ; dev_mode
 ralt - space ; dev_mode
 lcmd - space ; dev_mode
-dev_mode < escape ; default
-dev_mode < q : skhd -k "cmd - q"
 
 dev_mode < a : open -a /Applications/Arc.app > /dev/null 2>&1
-dev_mode < t : open -a /Applications/Ghostty.app > /dev/null 2>&1
+dev_mode < t : open -a /Applications/Warp.app > /dev/null 2>&1
 dev_mode < p : open -a /Applications/Apifox.app > /dev/null 2>&1
 dev_mode < c : open -a /Applications/Cursor.app > /dev/null 2>&1
 dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
 dev_mode < w : open -a /Applications/Weixin.app > /dev/null 2>&1
-dev_mode < space ; default
 
+dev_mode < space ; default
+dev_mode < escape ; default
+dev_mode < q : skhd -k "cmd - q"
+:: 退出开发模式
+
+
+# 快捷启动应用
+ralt - w : open -a /Applications/Weixin.app > /dev/null 2>&1
 
 # skhd --stop-service
 # skhd --start-service
 # skhd -r
 
-alt - 0x35 : open -a /Applications/Ghostty.app && sleep 1 > /dev/null 2>&1 && aerospace fullscreen on
+alt - 0x35 : aerospace workspace terminal --auto-back-and-forth
 
 # rcmd + 空格: 切换全屏
 rcmd - 0x31 : aerospace fullscreen
 
 
-cmd - n [
+rcmd - n [
     "kitty"        : echo "hello kitty"
-    *              : echo "hello everyone"
     "qutebrowser"  : echo "hello qutebrowser"
     "terminal"     ~
     "finder"       : false
     "Arc"          : skhd -k "cmd - t" 
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "t"
     "WezTerm"      : skhd -k "ctrl + cmd - t"
+    "Warp"      : skhd -k "cmd - t" 
+    *              : echo "hello everyone"
+]
+
+rcmd - w [
+    "Warp"            : skhd -k "cmd - w"   
+    *                 : ~
 ]
 
 rcmd - q [
@@ -58,6 +68,7 @@ rcmd - r [
 # ralt - [
 ralt - 0x21 [
     "WezTerm": skhd -k "cmd - 0x21"
+    "Warp": skhd -k "ctrl + shift - tab"
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x21"
     "微信（测试版）": skhd -k "cmd - up"
     *: aerospace focus --ignore-floating left --boundaries-action wrap-around-the-workspace
@@ -65,33 +76,27 @@ ralt - 0x21 [
 
 # ralt - ]
 ralt - 0x1E [
-    "WezTerm": skhd -k "cmd - 0x1E"
-    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x1E"
-    "微信（测试版）": skhd -k "cmd - down"
-    *: aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
-]
-
-# ralt - ]
-ralt - 0x1E [
-    "WezTerm": skhd -k "cmd - 0x1E"
-    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x1E"
-    "微信（测试版）": skhd -k "cmd - down"
-    *: aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
-]
-
+    "WezTerm"         : skhd -k "cmd - 0x1E"
+    "Warp"            : skhd -k "ctrl - tab"
+    "Ghostty"         : skhd -k "ctrl + shift - q" && skhd -k "0x1E"
+    "微信（测试版）"    : skhd -k "cmd - down"
+    *                 : aerospace focus --ignore-floating right --boundaries-action wrap-around-the-workspace
+]   
 
 # ralt - /
 ralt - 0x2C [
-    "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2C"
-    "WezTerm"      : skhd -k "ctrl + cmd - 0x2C"
-    *: aerospace layout tiles vertical
+    "Ghostty"         : skhd -k "ctrl + shift - q" && skhd -k "0x2C"
+    "WezTerm"         : skhd -k "ctrl + cmd - 0x2C"
+    "Warp"            : skhd -k "cmd + shift - d"
+    *                 : aerospace layout tiles vertical
 ]
 
 # ralt - \
 ralt - 0x2A [
     "Ghostty"      : skhd -k "ctrl + shift - q" && skhd -k "0x2A"
     "WezTerm"      : skhd -k "ctrl + cmd - 0x2A"
-    *: aerospace layout tiles horizontal
+    "Warp"            : skhd -k "cmd - d"   
+    *                 : aerospace layout tiles horizontal
 ]
 
 
@@ -114,7 +119,3 @@ ralt - l [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "l"
     *             : ~
 ]
-
-
-# 快捷启动应用
-rcmd - w : open -a /Applications/Weixin.app > /dev/null 2>&1
