@@ -1,7 +1,9 @@
 # Key: https://github.com/koekeishiya/skhd/issues/1
 
 :: default : echo "进入默认模式"
-:: 进入开发模式
+:: dev_mode : echo "进入开发模式"
+
+# 进入开发模式
 lcmd - q ; dev_mode
 ralt - space ; dev_mode
 lcmd - space ; dev_mode
@@ -16,7 +18,7 @@ dev_mode < w : open -a /Applications/Weixin.app > /dev/null 2>&1
 dev_mode < space ; default
 dev_mode < escape ; default
 dev_mode < q : skhd -k "cmd - q"
-:: 退出开发模式
+# 退出开发模式
 
 
 # 快捷启动应用
