@@ -514,25 +514,24 @@ local SUPPORTED_KEYS = {
     { on = "z" },
 }
 
-local _load_config = ya.sync(function(state, args)
+local _load_config = ya.sync(function(state, opts)
     state.save = {
         method = "yazi",
         lua_save_path = "",
     }
-    if type(args.save) == "table" then
-        if type(args.save.method) == "string" then
-            state.save.method = args.save.method
+    if type(opts.save) == "table" then
+        if type(opts.save.method) == "string" then
+            state.save.method = opts.save.method
         end
-        if type(args.save.lua_save_path) == "string" then
-            state.save.lua_save_path = args.save.lua_save_path
+        if type(opts.save.lua_save_path) == "string" then
+            state.save.lua_save_path = opts.save.lua_save_path
         else
             local lua_save_path
             local appdata = os.getenv("APPDATA")
-            local postfix = "/yazi/state/projects.json"
             if appdata then
-                lua_save_path = appdata:gsub("\\", "/") .. postfix
+                lua_save_path = appdata:gsub("\\", "/") .. "/yazi/state/projects.json"
             else
-                lua_save_path = os.getenv("HOME") .. postfix
+                lua_save_path = os.getenv("HOME") .. "/.local/state/yazi/projects.json"
             end
 
             state.save.lua_save_path = lua_save_path
@@ -542,22 +541,26 @@ local _load_config = ya.sync(function(state, args)
     state.last = {
         update_after_save = true,
         update_after_load = true,
+        load_after_start = false,
     }
-    if type(args.last) == "table" then
-        if type(args.last.update_after_save) == "boolean" then
-            state.last.update_after_save = args.last.update_after_save
+    if type(opts.last) == "table" then
+        if type(opts.last.update_after_save) == "boolean" then
+            state.last.update_after_save = opts.last.update_after_save
         end
-        if type(args.last.update_after_load) == "boolean" then
-            state.last.update_after_load = args.last.update_after_load
+        if type(opts.last.update_after_load) == "boolean" then
+            state.last.update_after_load = opts.last.update_after_load
+        end
+        if type(opts.last.load_after_start) == "boolean" then
+            state.last.load_after_start = opts.last.load_after_start
         end
     end
 
     state.merge = {
         quit_after_merge = false,
     }
-    if type(args.merge) == "table" then
-        if type(args.merge.quit_after_merge) == "boolean" then
-            state.merge.quit_after_merge = args.merge.quit_after_merge
+    if type(opts.merge) == "table" then
+        if type(opts.merge.quit_after_merge) == "boolean" then
+            state.merge.quit_after_merge = opts.merge.quit_after_merge
         end
     end
 
@@ -567,18 +570,18 @@ local _load_config = ya.sync(function(state, args)
         timeout = 3,
         level = "info",
     }
-    if type(args.notify) == "table" then
-        if type(args.notify.enable) == "boolean" then
-            state.notify.enable = args.notify.enable
+    if type(opts.notify) == "table" then
+        if type(opts.notify.enable) == "boolean" then
+            state.notify.enable = opts.notify.enable
         end
-        if type(args.notify.title) == "string" then
-            state.notify.title = args.notify.title
+        if type(opts.notify.title) == "string" then
+            state.notify.title = opts.notify.title
         end
-        if type(args.notify.timeout) == "number" then
-            state.notify.timeout = args.notify.timeout
+        if type(opts.notify.timeout) == "number" then
+            state.notify.timeout = opts.notify.timeout
         end
-        if type(args.notify.level) == "string" then
-            state.notify.level = args.notify.level
+        if type(opts.notify.level) == "string" then
+            state.notify.level = opts.notify.level
         end
     end
 end)
@@ -597,39 +600,6 @@ local _get_default_projects = ya.sync(function(state)
         list = {},
         last = nil,
     }
-end)
-
-local _save_projects = ya.sync(function(state, projects)
-    state.projects = projects
-
-    if state.save.method == "yazi" then
-        ps.pub_to(0, "@projects", projects)
-    elseif state.save.method == "lua" then
-        local f = io.open(state.save.lua_save_path, "w")
-        if not f then
-            return
-        end
-        f:write(json.encode(projects))
-        io.close(f)
-    end
-end)
-
-local _load_projects = ya.sync(function(state)
-    if state.save.method == "yazi" then
-        ps.sub_remote("@projects", function(body)
-            state.projects = body
-        end)
-    elseif state.save.method == "lua" then
-        local f = io.open(state.save.lua_save_path, "r")
-        if f then
-            state.projects = json.decode(f:read("*a"))
-            io.close(f)
-        end
-    end
-
-    if not state.projects then
-        state.projects = _get_default_projects()
-    end
 end)
 
 local _get_projects = ya.sync(function(state)
@@ -665,6 +635,21 @@ local _get_current_project = ya.sync(function(state)
     return project
 end)
 
+local _save_projects = ya.sync(function(state, projects)
+    state.projects = projects
+
+    if state.save.method == "yazi" then
+        ps.pub_to(0, "@projects", projects)
+    elseif state.save.method == "lua" then
+        local f = io.open(state.save.lua_save_path, "w")
+        if not f then
+            return
+        end
+        f:write(json.encode(projects))
+        io.close(f)
+    end
+end)
+
 local save_project = ya.sync(function(state, idx, desc)
     local projects = _get_projects()
 
@@ -695,8 +680,11 @@ end)
 local load_project = ya.sync(function(state, project, desc)
     -- TODO: add more tab properties to restore
 
-    for _ = 1, #cx.tabs - 1 do
-        ya.manager_emit("tab_close", { 0 })
+    -- when cx is nil, it is called in setup
+    if cx then
+        for _ = 1, #cx.tabs - 1 do
+            ya.manager_emit("tab_close", { 0 })
+        end
     end
 
     local sorted_tabs = {}
@@ -724,6 +712,33 @@ local load_project = ya.sync(function(state, project, desc)
             message = string.format([[Last project loaded]], desc)
         end
         _notify(message)
+    end
+
+    ps.pub_to(0, "project-loaded", project)
+end)
+
+local _load_projects = ya.sync(function(state)
+    if state.save.method == "yazi" then
+        ps.sub_remote("@projects", function(body)
+            state.projects = body
+        end)
+    elseif state.save.method == "lua" then
+        local f = io.open(state.save.lua_save_path, "r")
+        if f then
+            state.projects = json.decode(f:read("*a"))
+            io.close(f)
+        end
+    end
+
+    if not state.projects then
+        state.projects = _get_default_projects()
+    end
+
+    if state.last.load_after_start then
+        local last_project = _get_projects().last
+        if last_project then
+            load_project(last_project)
+        end
     end
 end)
 
@@ -808,8 +823,13 @@ local _merge_event = ya.sync(function(state)
 end)
 
 return {
-    entry = function(_, args)
-        local action = args[1]
+    setup = function(_, opts)
+        _load_config(opts)
+        _load_projects()
+        _merge_event()
+    end,
+    entry = function(_, job)
+        local action = job.args[1]
         if not action then
             return
         end
@@ -825,7 +845,7 @@ return {
         end
 
         if action == "merge" then
-            local opt = args[2]
+            local opt = job.args[2]
             merge_project(opt)
             return
         end
@@ -895,10 +915,5 @@ return {
         elseif action == "delete" then
             delete_project(selected_idx)
         end
-    end,
-    setup = function(_, args)
-        _load_config(args)
-        _load_projects()
-        _merge_event()
     end,
 }
