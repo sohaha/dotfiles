@@ -30,7 +30,7 @@ run = "tab_create"
 desc = "New tab"
 
 [[manager.prepend_keymap]]
-on = ["w","t"]
+on = ["w", "t"]
 run = "tab_create"
 desc = "New tab"
 
@@ -118,9 +118,24 @@ desc = "Seek down 5 units in the preview"
 
 [[manager.prepend_keymap]]
 on = "y"
-run = [ '''
-shell 'for path in "$@"; do echo "file://$path"; done | pbcopy' --confirm
-''', "yank" ]
+run = [
+  """
+  shell '
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+      cat "$@" | pbcopy
+  elif command -v xclip >/dev/null 2>&1; then
+      cat "$@" | xclip -selection clipboard
+  elif command -v xsel >/dev/null 2>&1; then
+      cat "$@" | xsel --clipboard --input
+  else
+      echo "No clipboard command found. Please install xclip or xsel."
+      exit 1
+  fi
+  '
+  """,
+  "yank"
+]
+desc = "Copy file contents to clipboard"
 
 [[manager.append_keymap]]
 on = ["l"]
