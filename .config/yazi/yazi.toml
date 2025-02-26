@@ -36,8 +36,8 @@ open = [
 ]
 fallback = [{ run = 'xdg-open "$@"', desc = "xdg-Open" }]
 edit = [
-  { run = '$EDITOR "$@"', block = true, for = "unix", desc = "EDITOR" },
-  { run = '$EDITOR "$@"', block = true, for = "macos" },
+  { run = '$EDITOR "$@"', block = true, for = "unix", desc = "默认" },
+  # { run = '$EDITOR "$@"', block = true, for = "macos" },
   { run = "%EDITOR% %*", block = true, for = "windows" },
   { run = 'cursor "$@"', for = "macos", desc = "cursor" },
   { run = 'code "$@"', for = "macos", desc = "vscode" },
