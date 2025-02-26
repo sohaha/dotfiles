@@ -40,6 +40,7 @@ soft=(
   # "sampler"                         # Sampler
   "warp"                            # Warp
   # "mpv-iina"                        # mpv
+  "bat"                             # 文件查看
 )
 
 services=()

@@ -50,41 +50,42 @@ on = ["c", "m"]
 run = "plugin chmod"
 desc = "Chmod on selected files"
 
-[[manager.prepend_keymap]]
-on = ["f", "s"]
-run = "search fd"
-desc = "Search files by name using fd"
+# [[manager.prepend_keymap]]
+# on = ["f", "s"]
+# run = "search fd"
+# desc = "Search files by name using fd"
 
 
 [[manager.prepend_keymap]]
 on = ["f", "d"]
-run = "search fd"
-desc = "Search files by name using fd"
+run = "plugin fg fzfd"
+# run = "search fd"
+desc = "搜索目录"
 
-[[manager.prepend_keymap]]
-on = ["f", "g"]
-run = "plugin fg"
-desc = "find file by content (fuzzy match)"
+# [[manager.prepend_keymap]]
+# on = ["f", "g"]
+# run = "plugin fg"
+# desc = "find file by content (fuzzy match)"
 
-[[manager.prepend_keymap]]
-on = ["f", "G"]
-run = "plugin fg --args='rg'"
-desc = "find file by content (ripgrep match)"
+# [[manager.prepend_keymap]]
+# on = ["f", "G"]
+# run = "plugin fg --args='rg'"
+# desc = "find file by content (ripgrep match)"
 
 [[manager.prepend_keymap]]
 on = ["f", "n"]
-run = "plugin fg --args='fzf'"
-desc = "find file by filename"
+run = "plugin fg fzf"
+desc = "全部搜索"
 
 [[manager.prepend_keymap]]
 on = ["f", "f"]
-run = "filter --smart"
-desc = "Filter files"
+run = "plugin fg fzfc"
+desc = "搜索文件名"
 
 [[manager.prepend_keymap]]
 on = ["f", "F"]
 run = "plugin smart-filter"
-desc = "Smart Filter"
+desc = "过滤列表"
 
 [[manager.prepend_keymap]]
 on = ["<C-Enter>"]

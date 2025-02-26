@@ -10,7 +10,7 @@ export GIT_EDITOR=$EDITOR
 
 # fzf
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgreprc
-export FZF_DEFAULT_COMMAND="rg --files"
+# export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--preview ""' # disable FZF preview
 export FZF_DEFAULT_OPTS=" \
