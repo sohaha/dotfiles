@@ -12,38 +12,42 @@ search = "fd"
 [[manager.prepend_keymap]]
 on = ["q"]
 run = "plugin projects quit"
-desc = "Save last project and exit the process"
+desc = "保存最后项目并退出进程"
 
 [[manager.prepend_keymap]]
 on = [";"]
 run = '''shell "$SHELL" --block --confirm'''
-desc = "Open shell"
+desc = "打开终端"
 
 [[manager.prepend_keymap]]
 on = ["?"]
 run = "help"
-desc = "Show help"
+desc = "显示帮助"
 
 [[manager.prepend_keymap]]
 on = ["<C-t>"]
 run = "tab_create"
-desc = "New tab"
+desc = "新标签"
 
 [[manager.prepend_keymap]]
 on = ["w", "t"]
 run = "tab_create"
-desc = "New tab"
-
+desc = "新标签"
 
 [[manager.prepend_keymap]]
 on = ["<C-w>"]
 run = "tab_close"
-desc = "Close current tab"
+desc = "关闭当前标签页"
+
+[[manager.prepend_keymap]]
+on = ["w", "x"]
+run = "tab_close"
+desc = "关闭当前标签页"
 
 [[manager.prepend_keymap]]
 on = ["w", "p"]
-run = "plugin --sync preview-visibility --args=toggle"
-desc = "Show/hide preview"
+run = "plugin --sync preview-visibility toggle"
+desc = "显示/隐藏预览"
 
 [[manager.prepend_keymap]]
 on = ["c", "m"]
@@ -94,27 +98,27 @@ desc = "Show context menu for hovered file"
 
 [[manager.prepend_keymap]]
 on = ["q"]
-run = "plugin --sync nvim --args=quit"
+run = "plugin --sync nvim quit"
 desc = "Quit"
 
 [[manager.prepend_keymap]]
 on = ["<Enter>"]
-run = "plugin --sync nvim --args=open"
+run = "plugin --sync nvim open"
 desc = "Open"
 
 [[manager.prepend_keymap]]
 on = ["<S-Up>"]
-run = "plugin --sync nvim --args='scroll-preview -5'"
+run = "plugin --sync nvim 'scroll-preview -5'"
 desc = "Seek up 5 units in the preview"
 
 [[manager.prepend_keymap]]
 on = ["<S-Up>"]
-run = "plugin --sync nvim --args='scroll-preview -5'"
+run = "plugin --sync nvim 'scroll-preview -5'"
 desc = "Seek up 5 units in the preview"
 
 [[manager.prepend_keymap]]
 on = ["<S-Down>"]
-run = "plugin --sync nvim --args='scroll-preview 5'"
+run = "plugin --sync nvim 'scroll-preview 5'"
 desc = "Seek down 5 units in the preview"
 
 [[manager.prepend_keymap]]
@@ -175,7 +179,7 @@ on = ["g", "."]
 run = "cd ~/.config/"
 desc = "Config"
 
-[[manager.append_keymap]]
+[[manager.prepend_keymap]]
 on = ["g", "c"]
 run = "cd ~/Code/"
 desc = "Code"
@@ -195,38 +199,38 @@ desc = "back to the root of the current Git repository"
 # projects
 [[manager.prepend_keymap]]
 on = ["P", "s"]
-run = "plugin projects --args=save"
-desc = "Save current project"
+run = "plugin projects save"
+desc = "保存当前方案"
 
 [[manager.prepend_keymap]]
 on = ["P", "l"]
-run = "plugin projects --args=load"
-desc = "Load project"
+run = "plugin projects load"
+desc = "加载当前方案"
 
 [[manager.prepend_keymap]]
 on = ["P", "P"]
-run = "plugin projects --args=load_last"
-desc = "Load last project"
+run = "plugin projects load_last"
+desc = "加载最后一个方案"
 
 [[manager.prepend_keymap]]
 on = ["P", "d"]
-run = "plugin projects --args=delete"
-desc = "Delete project"
+run = "plugin projects delete"
+desc = "删除当前项目"
 
 [[manager.prepend_keymap]]
 on = ["P", "D"]
-run = "plugin projects --args=delete_all"
-desc = "Delete all projects"
+run = "plugin projects delete_all"
+desc = "删除所有项目"
 
 [[manager.prepend_keymap]]
 on = ["P", "m"]
-run = "plugin projects --args='merge current'"
-desc = "Merge current tab to other projects"
+run = "plugin projects merge current"
+desc = "合并当前项目到其他项目"
 
 [[manager.prepend_keymap]]
 on = ["P", "M"]
-run = "plugin projects --args='merge all'"
-desc = "Merge current project to other projects"
+run = "plugin projects merge all"
+desc = "合并当前项目到所有项目"
 # projects end
 
 [tasks]
