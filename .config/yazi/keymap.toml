@@ -82,12 +82,12 @@ run = "plugin fg fzf"
 desc = "全部搜索"
 
 [[manager.prepend_keymap]]
-on = ["f", "f"]
+on = ["f", "n"]
 run = "plugin fg fzfc"
 desc = "搜索文件名"
 
 [[manager.prepend_keymap]]
-on = ["f", "F"]
+on = ["f", "f"]
 run = "plugin smart-filter"
 desc = "过滤列表"
 
