@@ -105,20 +105,44 @@ ralt - 0x2A [
 
 ralt - h [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "h"
+    "Warp"          : skhd -k "cmd + alt - left"
     *             : ~
 ]
 
 ralt - j [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "j"
+    "Warp"          : skhd -k "cmd + alt - down"
     *             : ~
 ]
 
 ralt - k [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "k"
+    "Warp"          : skhd -k "cmd + alt - up"
     *             : ~
 ]
 
 ralt - l [
     "Ghostty"       : skhd -k "ctrl + shift - g" && skhd -k "l"
+    "Warp"          : skhd -k "cmd + alt - right"
     *             : ~
 ]
+
+# ralt - a [
+#     "Warp"          : skhd -k "cmd + alt - left"
+#     *             : ~
+# ]
+
+# ralt - s [
+#     "Warp"          : skhd -k "cmd + alt - down"
+#     *             : ~
+# ]
+
+# ralt - d [
+#     "Warp"          : skhd -k "cmd + alt - right"
+#     *             : ~
+# ]
+
+# ralt - w [
+#     "Warp"          : skhd -k "cmd + alt - up"
+#     *             : ~
+# ]
