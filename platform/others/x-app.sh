@@ -2,7 +2,8 @@
 
 eval "$(curl https://get.x-cmd.com)"
 
-curl -sSfL https://raw.githubusercontent.com/iffse/pay-respects/main/install.sh | sh
+# # 可能需要安装 zstd: sudo apt-get install zstd 
+curl -sSfL https://raw.githubusercontent.com/iffse/pay-respects/main/install.sh | sh > /dev/null 2>&1
 
 soft=(
   "bottom"     # 系统信息
@@ -15,9 +16,10 @@ soft=(
   # "trashy"   # 回收站
 )
 
+echo "======================= 手动安装 x-cmd 命令 ========================="
 for app in "${soft[@]}"; do
-  x install "$app" || echo "Failed to install $app"
+  echo "x install $app"
 done
-
+echo "===================================================================="
 # x openai init 
 
