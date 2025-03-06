@@ -292,3 +292,8 @@ run = ['layout tiling', 'move-node-to-workspace 8']
 # Parallels Desktop
 if.app-id = 'com.parallels.desktop.console'
 run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+# iWork Numbers
+if.app-id = 'com.apple.iWork.Numbers'
+run = ['layout tiling', 'move-node-to-workspace 9']
