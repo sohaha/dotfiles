@@ -40,6 +40,7 @@ fi
 # [ -x "$(command -v direnv)" ] && eval "$(direnv hook $current_shell)"
 
 export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/go/bin:$HOME/bin:$HOME/.bun/bin:$PATH
+export RUSTFLAGS="--remap-path-prefix $(pwd)=/build"
 
 source "$current_script_dir/alias.sh"
 
