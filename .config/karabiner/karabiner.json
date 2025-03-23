@@ -526,7 +526,7 @@
                                 "to": [
                                     {
                                         "key_code": "s",
-                                        "modifiers": ["left_control", "left_alt", "left_command", "left_shift"]
+                                        "modifiers": ["left_alt", "left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
