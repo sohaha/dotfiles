@@ -41,6 +41,7 @@ soft=(
   "warp"                            # Warp
   # "mpv-iina"                        # mpv
   "bat"                             # 文件查看
+  "mouseless"                       # 鼠标控制
 )
 
 services=()
