@@ -23,4 +23,17 @@ if test -d "$HOME/.go/bin"
 end
 
 
+# 设置代理别名
+function on_proxy
+    set -gx http_proxy "http://$proxy_host"
+    set -gx https_proxy "http://$proxy_host"
+    # set -gx all_proxy "socks5://$proxy_host"
+    echo "Proxy enabled"
+end
 
+function off_proxy
+    set -e http_proxy
+    set -e https_proxy
+    set -e all_proxy
+    echo "Proxy disabled"
+end
