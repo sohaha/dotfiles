@@ -132,6 +132,7 @@ alt-0 = 'workspace 0 --auto-back-and-forth'
 alt-p = 'workspace p --auto-back-and-forth'
 # alt-o = 'workspace o --auto-back-and-forth'
 alt-i = 'workspace idea --auto-back-and-forth'
+alt-o = 'workspace ai --auto-back-and-forth'
 # alt-u = 'workspace u --auto-back-and-forth'
 # alt-y = 'workspace y --auto-back-and-forth'
 # alt-t = 'workspace t --auto-back-and-forth'
@@ -139,7 +140,7 @@ alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 # alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser'
-cmd-alt-ctrl-shift-2 = 'workspace terminal'
+cmd-alt-ctrl-shift-2 = 'workspace ai'
 cmd-alt-ctrl-shift-3 = 'workspace note --auto-back-and-forth'
 
 
@@ -313,3 +314,9 @@ run = ['move-node-to-workspace tools']
 # TablePlus
 if.app-id = 'com.tinyapp.TablePlus'
 run = ['move-node-to-workspace tools']
+
+
+[[on-window-detected]]
+# CherryStudio
+if.app-id = 'com.kangfenmao.CherryStudio'
+run = ['move-node-to-workspace ai']

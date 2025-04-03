@@ -22,7 +22,7 @@ grid_configs:
     callback: build_cell_strings
     num_cells_x: 10
     num_cells_y: 1
-  - border_width: 1
+  - border_width: 1.0
     callback: build_cell_strings
     num_cells_x: 1
     num_cells_y: 26
@@ -45,7 +45,7 @@ keymaps:
     cycle mouse action type: null
     cycle mouse button: null
     decrease overlay opacity: ArrowDown
-    edit config: Tab
+    edit config: null
     enter wheel mode: null
     execute mouse action: Space
     execute mouse move: OptionLeft tap
@@ -97,14 +97,14 @@ monitor_assignment_mode: auto
 name: ''
 style_configs:
 - always_on_subgrid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.2
   background_rgba:
-  - 0
-  - 0
-  - 0
+  - 0.0
+  - 0.0
+  - 0.0
   - 0.35
   char_spacing_cell_width_ratio: 0.5
   char_spacing_font_size_ratio: 0.5
@@ -125,7 +125,7 @@ style_configs:
   - 1.0
   - 0.7
   cursor_rgba:
-  - 1
+  - 1.0
   - 0.54
   - 0.0
   - 0.7
@@ -138,9 +138,9 @@ style_configs:
   font_size_multiplier: 0.4
   grid_line_style: lines
   grid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   highlight_rgba:
   - 0.77
@@ -151,27 +151,27 @@ style_configs:
   show_initial_highlight: false
   subgrid_font_size_multiplier: 0.75
   subgrid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   subgrid_text_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   text_rgba:
-  - 1
-  - 1
-  - 1
-  - 1
-  text_shadow_blur_radius: 2
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  text_shadow_blur_radius: 2.0
   text_shadow_offset:
-  - 0
-  - 0
+  - 0.0
+  - 0.0
   text_shadow_rgba:
-  - 0
-  - 0
-  - 0
-  - 1
-  window_opacity: 1
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  window_opacity: 1.0
