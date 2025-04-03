@@ -24,10 +24,18 @@ end
 
 
 # 设置代理别名
-function on_proxy
-    set -gx http_proxy "http://$proxy_host"
-    set -gx https_proxy "http://$proxy_host"
-    # set -gx all_proxy "socks5://$proxy_host"
+function on_proxy --argument proxy_host
+    if test -z "$proxy_host"
+        set proxy_host "127.0.0.1:7890"
+    end
+    
+    if not string match -r "^(http|socks5)://" "$proxy_host"
+        set proxy_host "http://$proxy_host"
+    end
+    
+    set -gx http_proxy "$proxy_host"
+    set -gx https_proxy "$proxy_host"
+    set -gx all_proxy "$proxy_host"
     echo "Proxy enabled"
 end
 
