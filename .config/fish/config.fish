@@ -36,7 +36,7 @@ function on_proxy --argument proxy_host
     set -gx http_proxy "$proxy_host"
     set -gx https_proxy "$proxy_host"
     set -gx all_proxy "$proxy_host"
-    echo "Proxy enabled"
+    echo "Proxy enabled: $proxy_host"
 end
 
 function off_proxy
