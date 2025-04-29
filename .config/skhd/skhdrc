@@ -13,7 +13,7 @@ dev_mode < t : open -a /Applications/Warp.app > /dev/null 2>&1
 dev_mode < p : open -a /Applications/Apifox.app > /dev/null 2>&1
 dev_mode < c : open -a /Applications/Cursor.app > /dev/null 2>&1
 dev_mode < x : open -a /Applications/XTerminal.app > /dev/null 2>&1
-dev_mode < w : open -a /Applications/Weixin.app > /dev/null 2>&1
+dev_mode < w : open -a /Applications/WeChat.app > /dev/null 2>&1
 dev_mode < s : open -a /Applications/TablePlus.app > /dev/null 2>&1
 
 dev_mode < space ; default
@@ -23,7 +23,7 @@ dev_mode < q : skhd -k "cmd - q"
 
 
 # 快捷启动应用
-ralt - w : open -a /Applications/Weixin.app > /dev/null 2>&1
+ralt - w : open -a /Applications/WeChat.app > /dev/null 2>&1
 
 # skhd --stop-service
 # skhd --start-service
