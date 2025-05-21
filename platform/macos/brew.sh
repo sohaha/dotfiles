@@ -20,7 +20,7 @@ soft=(
   "utools"                          # utools
   "lazygit"                         # GIT UI
   "chsrc"                           # 切换源
-  "mac-cleanup-py"                  # 自动清理
+  # "mac-cleanup-py"                  # 自动清理
   "zen-browser"                     # Zen Browser
   "yazi"                            # Yazi
   "anhoder/go-musicfox/go-musicfox" # 网易云音乐
@@ -37,7 +37,11 @@ soft=(
   "anytype"                         # Anytype
   "ghostty"                         # Ghostty
   "applite"                         # 汇总应用商店
+  # "sampler"                         # Sampler
+  "warp"                            # Warp
   # "mpv-iina"                        # mpv
+  "bat"                             # 文件查看
+  "mouseless"                       # 鼠标控制
 )
 
 services=()

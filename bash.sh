@@ -10,7 +10,7 @@ export GIT_EDITOR=$EDITOR
 
 # fzf
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgreprc
-export FZF_DEFAULT_COMMAND="rg --files"
+# export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--preview ""' # disable FZF preview
 export FZF_DEFAULT_OPTS=" \
@@ -28,6 +28,9 @@ if [ "$current_shell" = "zsh" ]; then
     fi
 fi
 
+if [ -f "$HOME/.env" ]; then
+  source "$HOME/.env"
+fi
 
 # direnv
 # if ! command -v direnv &> /dev/null; then
@@ -37,6 +40,7 @@ fi
 # [ -x "$(command -v direnv)" ] && eval "$(direnv hook $current_shell)"
 
 export PATH=$HOME/.go/current/bin:$HOME/.go/bin:$HOME/.go:$HOME/go/bin:$HOME/bin:$HOME/.bun/bin:$PATH
+export RUSTFLAGS="--remap-path-prefix $(pwd)=/build"
 
 source "$current_script_dir/alias.sh"
 

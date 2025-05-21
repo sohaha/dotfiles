@@ -2,6 +2,9 @@
 
 source $HOME/dotfiles/script/utils.sh
 
+# mouseless 暂时使用硬链接
+# ln ~/.config/mouseless/config.yaml "$HOME/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs/config.yaml"
+
 # vimo
 mkdir -p "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs"
 link_file_hard "$HOME/dotfiles/config/vimo/VERSION" "$HOME/Library/Containers/ChenghaoQ.Vimo-Rebinder/Data/Documents/Configs/VERSION"

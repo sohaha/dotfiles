@@ -26,10 +26,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 automatically-unhide-macos-hidden-apps = true
 
-[workspace-to-monitor-force-assignment]
-1 = 'main'
-2 = ['main']
-3 = ['main']
+#[workspace-to-monitor-force-assignment]
+#1 = 'main'
+#2 = ['main']
+#3 = ['main']
 
 [key-mapping]
 preset = 'qwerty'
@@ -132,6 +132,7 @@ alt-0 = 'workspace 0 --auto-back-and-forth'
 alt-p = 'workspace p --auto-back-and-forth'
 # alt-o = 'workspace o --auto-back-and-forth'
 alt-i = 'workspace idea --auto-back-and-forth'
+alt-o = 'workspace ai --auto-back-and-forth'
 # alt-u = 'workspace u --auto-back-and-forth'
 # alt-y = 'workspace y --auto-back-and-forth'
 # alt-t = 'workspace t --auto-back-and-forth'
@@ -139,7 +140,7 @@ alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 # alt-r = 'workspace r --auto-back-and-forth'
 
 cmd-alt-ctrl-shift-1 = 'workspace browser'
-cmd-alt-ctrl-shift-2 = 'workspace terminal'
+cmd-alt-ctrl-shift-2 = 'workspace ai'
 cmd-alt-ctrl-shift-3 = 'workspace note --auto-back-and-forth'
 
 
@@ -168,6 +169,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-comma = 'mode service'
+alt-shift-backtick = 'mode service'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -184,6 +186,12 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# 移动工作区
+h = ['move-workspace-to-monitor --wrap-around left', 'mode main']
+l = ['move-workspace-to-monitor --wrap-around right', 'mode main']
+j = ['move-workspace-to-monitor --wrap-around down', 'mode main']
+k = ['move-workspace-to-monitor --wrap-around up', 'mode main']
 
 down = 'volume down'
 up = 'volume up'
@@ -228,12 +236,13 @@ run = ['move-node-to-workspace 1']
 [[on-window-detected]]
 # 微信
 if.app-id = 'com.tencent.xWeChat'
-# if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
 run = ['layout floating', 'move-node-to-workspace chat']
 
 [[on-window-detected]]
+# 微信
 if.app-id = 'com.tencent.xinWeChat'
-run = 'move-node-to-workspace chat'
+# if.window-title-regex-substring = '^(?!WeChat \(Chats\)|微信 \(聊天\)).*$'
+run = ['layout floating', 'move-node-to-workspace chat']
 
 [[on-window-detected]]
 if.window-title-regex-substring = '(setting|设置)'
@@ -276,3 +285,44 @@ run = ['move-node-to-workspace idea']
 # 飞书
 if.app-id = 'com.electron.lark'
 run = ['move-node-to-workspace 0']
+
+[[on-window-detected]]
+# RDC
+if.app-id = 'com.microsoft.rdc.macos'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+# Mouseless
+if.app-id = 'net.sonuscape.mouseless'
+run = ['layout tiling', 'move-node-to-workspace 0']
+
+[[on-window-detected]]
+# Windows App RDC
+if.app-id = 'com.microsoft.rdc.macos'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+# Parallels Desktop
+if.app-id = 'com.parallels.desktop.console'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+# iWork Numbers
+if.app-id = 'com.apple.iWork.Numbers'
+run = ['layout tiling', 'move-node-to-workspace 9']
+
+[[on-window-detected]]
+# Apifox
+if.app-id = 'cn.apifox.app'
+run = ['move-node-to-workspace tools']
+
+[[on-window-detected]]
+# TablePlus
+if.app-id = 'com.tinyapp.TablePlus'
+run = ['move-node-to-workspace tools']
+
+
+[[on-window-detected]]
+# CherryStudio
+if.app-id = 'com.kangfenmao.CherryStudio'
+run = ['move-node-to-workspace ai']

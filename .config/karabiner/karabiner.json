@@ -345,8 +345,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "w",
-                                        "modifiers": ["left_control", "left_alt", "left_command", "left_shift"]
+                                        "key_code": "up_arrow",
+                                        "modifiers": "left_control"
                                     }
                                 ],
                                 "type": "basic"
@@ -526,7 +526,7 @@
                                 "to": [
                                     {
                                         "key_code": "s",
-                                        "modifiers": ["left_control", "left_alt", "left_command", "left_shift"]
+                                        "modifiers": ["left_alt", "left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
