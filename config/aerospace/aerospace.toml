@@ -187,8 +187,8 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
-h = ['move-workspace-to-monitor --wrap-around prev']
-l = ['move-workspace-to-monitor --wrap-around next']
+# h = ['move-workspace-to-monitor --wrap-around prev']
+# l = ['move-workspace-to-monitor --wrap-around next']
 
 # 移动工作区
 h = ['move-workspace-to-monitor --wrap-around left', 'mode main']
