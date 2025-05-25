@@ -5,3 +5,5 @@ export SILICONFLOW_TOKEN=
 export OPENAI_API_KEY=
 export OPENAI_MODEL=gpt-3.5-turbo
 export OPENAI_BASE_URL=https://api.openai.com/v1
+export OPENAI_API_BASE=https://api.openai.com/v1
+export OPENROUTER_API_KEY=

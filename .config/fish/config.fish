@@ -44,3 +44,15 @@ function off_proxy
     set -e all_proxy
     echo "Proxy disabled"
 end
+
+
+# 设置别名
+alias ll="ls -la"
+
+# 代替 rm
+if command -v gomi > /dev/null
+    alias rm="gomi"
+end
+
+alias gc1="git clone --depth=1"
+alias gdiff="git diff  --cached | cat"
