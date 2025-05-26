@@ -131,7 +131,7 @@ alt-9 = 'workspace 9 --auto-back-and-forth'
 alt-0 = 'workspace 0 --auto-back-and-forth'
 alt-p = 'workspace p --auto-back-and-forth'
 # alt-o = 'workspace o --auto-back-and-forth'
-alt-i = 'workspace idea --auto-back-and-forth'
+alt-i = 'workspace dia-browser --auto-back-and-forth'
 alt-o = 'workspace ai --auto-back-and-forth'
 # alt-u = 'workspace u --auto-back-and-forth'
 # alt-y = 'workspace y --auto-back-and-forth'
@@ -324,8 +324,12 @@ run = ['move-node-to-workspace tools']
 if.app-id = 'com.tinyapp.TablePlus'
 run = ['move-node-to-workspace tools']
 
-
 [[on-window-detected]]
 # CherryStudio
 if.app-id = 'com.kangfenmao.CherryStudio'
 run = ['move-node-to-workspace ai']
+
+[[on-window-detected]]
+# DiaBrowser
+if.app-id = 'company.thebrowser.dia'
+run = ['move-node-to-workspace dia-browser']
