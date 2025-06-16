@@ -171,6 +171,18 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-shift-comma = 'mode service'
 alt-shift-backtick = 'mode service'
 
+
+# 合并窗口
+# alt-\ 合并到右侧
+alt-backslash = 'join-with left'
+# alt-] 合并到下方
+alt-rightSquareBracket = 'join-with down'
+# alt-[ 合并到上方
+alt-leftSquareBracket = 'join-with up'
+# alt-` 合并到左侧
+alt-backtick = 'join-with right'
+
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
