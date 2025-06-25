@@ -338,7 +338,7 @@ run = ['move-node-to-workspace tools']
 [[on-window-detected]]
 # TablePlus
 if.app-id = 'com.tinyapp.TablePlus'
-run = ['move-node-to-workspace tools']
+run = ['layout floating', 'move-node-to-workspace tools']
 
 [[on-window-detected]]
 # CherryStudio
