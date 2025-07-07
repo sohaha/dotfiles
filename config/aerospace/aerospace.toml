@@ -2,10 +2,10 @@
 after-login-command = []
 after-startup-command = []
 start-at-login = true
-# exec-on-workspace-change = [
-#     '/bin/bash',
-#     '$HOME/dotfiles/config/aerospace/change.sh',
-# ]
+exec-on-workspace-change = [
+    '/bin/bash', '-c',
+    '$HOME/dotfiles/config/aerospace/change.sh',
+]
 
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
@@ -160,7 +160,7 @@ alt-shift-p = ['move-node-to-workspace p', 'workspace p']
 alt-shift-i = ['move-node-to-workspace i', 'workspace idea']
 alt-shift-u = ['move-node-to-workspace u', 'workspace u']
 alt-shift-y = ['move-node-to-workspace y', 'workspace y']
-alt-shift-t = ['move-node-to-workspace t', 'workspace t']
+#alt-shift-t = ['move-node-to-workspace t', 'workspace t']
 alt-shift-r = ['move-node-to-workspace r', 'workspace r']
 
 
