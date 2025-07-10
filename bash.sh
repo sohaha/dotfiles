@@ -47,7 +47,7 @@ source "$current_script_dir/alias.sh"
 if [ "$current_shell" = "zsh" ]; then
   source $current_script_dir/zsh_alias.sh
 else
-    source $current_script_dir/bash_alias.sh
+  source $current_script_dir/bash_alias.sh
 fi
 
 

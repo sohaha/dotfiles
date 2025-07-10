@@ -45,3 +45,11 @@ function proxy_status() {
     echo $https_proxy
     curl cip.cc
 }
+
+function notifyMe() {
+  if [ $? -eq 0 ]; then
+    osascript -e 'display notification "The command finished" with title "Success"'
+  else
+    osascript -e 'display notification "The command failed" with title "Failed"'
+  fi
+}
