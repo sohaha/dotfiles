@@ -33,7 +33,8 @@ soft=(
   "lihaoyun6/tap/topit"             # 模拟窗口置顶
   "amethyst"                        # 窗口管理
   "nikitabobko/tap/aerospace"       # 窗口管理
-  "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
+  "skhd-zig"                        # 按键管理：skhd --start-service
+  # "koekeishiya/formulae/skhd"       # 按键管理：skhd --start-service
   "anytype"                         # Anytype
   "ghostty"                         # Ghostty
   "applite"                         # 汇总应用商店
